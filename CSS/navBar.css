@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /*background-color: #182b4d;*/
+}
+
+li, a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #3ab24c;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: center; /* Centers the entire content, including the logo */
+    align-items: center;
+    position: relative; /* Allows for absolute positioning of the logo */
+}
+
+.logo {
+    position: absolute;
+    left: 0; /* Ensures the logo stays on the left side */
+    margin-left: 100px; 
+    width: 250px;
+    height: auto;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center the nav links horizontally */
+    margin: 0;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 25px 35px;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: #0d7e07;
+}
+
+.current-page {
+    color: #0d5420;
+    font-weight: bold; 
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #edf0f1;
+    margin: 3px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .nav__container {
+        position: relative;
+    }
+
+    .nav__links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); /* This puts the menu in the center, I tried to put it in the right corner but it covered the hamburger icon, which didnt make it clickable anymore*/
+        background-color: #0a1d3f;
+        width: 90%; 
+        padding: 10px 0;
+        text-align: center;
+        /* box-shadow: 0 2px 1px -2px rgba(0, 0, 0, 1); */
+    }
+
+    .nav__links.show {
+        display: flex;
+    }
+
+    .nav__links li {
+        display: block;
+        padding: 10px 0;
+    }
+}
