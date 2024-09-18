@@ -13,6 +13,8 @@
         import { initialise } from "./Javascript/navMenu.js";
         initialise("Unlock");
     </script> 
+    
+    <link rel = "stylesheet" href = "/CSS/unlockPage.css">
 
 </head>
 <body>
@@ -29,24 +31,13 @@
     </section>
 
     <!-- use map method* -->
-    <div class="section-center">
-        <!-- single item -->
-        <article class="diet-item">
-          <img src="/Images/CitrusDiet.jpg" alt="diet plan item" width = 480 height = 400 class="photo" />
-          <div class="item-info">
-            <header>
-              <h4>Citrus Diet Plan (Basic Plan) </h4>
-              <h4 class="price">R120</h4>
-            </header>
-            <p class="item-text">
-                Includes weekly citrus-based meal plans, recipes, nutritional tips, a monthly progress check-in, and one mentor consultation.
-            </p>
-            <button id = "Buy Btn">Buy</button>
-          </div>
-        </article>
-        <!-- end of single item -->
-      </div>
 
+      <div class="section-center card-container" id="diet-cards">
+          <!-- Cards will be inserted here by JavaScript -->
+      </div>
+  
+      <script src = "/Javascript/dietPlans.js"></script>
+      
       <footer>
         <section style="height: 50px;">
             <p> Brought to you by Matalame Mamabolo</p>
