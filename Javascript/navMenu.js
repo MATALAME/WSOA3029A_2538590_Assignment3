@@ -2,7 +2,7 @@ const root = "/WSOA3029A_2538590_Assignment3";
 
 const menuItems = [
     { name: "Home", href: root + "/index.html"},
-    { name: "Unlock", href: root + "/Unlock/index.html" },
+    { name: "Unlock", href: root + "./Unlock/index.html" },
     { name: "Pricing", href: `${root}/Pricing/index.html` },
     { name: "Design", href: `${root}/Design/index.html` },
     { name: "Explore", href: `${root}/Explore/index.html` },
