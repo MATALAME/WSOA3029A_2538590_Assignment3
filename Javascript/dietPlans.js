@@ -35,7 +35,7 @@ dietPlan.map(plan => {
             <h3>${plan.name}</h3>
             <p>${plan.description}</p>
             <p class="price">${plan.price}</p>
-            <button class="btn">Buy</button>
+            <button class="btn">See More</button>
         </div>
     `;
 
