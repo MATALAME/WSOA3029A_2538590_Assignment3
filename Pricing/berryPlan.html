@@ -10,14 +10,17 @@
     <title>Berry</title>
 
     <script type="module">
-        import { initialise } from "./Javascript/navMenu.js";
+        import { initialise } from "../Javascript/navMenu.js";
         initialise("Pricing");
     </script> 
  
-    <link rel = "stylesheet" href = "/CSS/pricing.css">
+    <link rel = "stylesheet" href = "../CSS/pricing.css">
+    <link rel = "stylesheet" href = "../CSS/navBar.css">
+
 </head>
 <body>
     <header>
+        <img class = "logo" src = "../Images/Logo1.png" alt = "logo">
         <nav> 
 
         </nav>
@@ -26,20 +29,20 @@
     <div class="Plan-Card" id="plans-cards">
         <div class="content">
             <h1> Berry Fruit Plan </h1>
-            <h2> You’ve selected the Elite Plan:</h2>
+            <h2> You’ve selected the Elite Plan for R220/pm:</h2>
             <p> This plan includes: </p>
-            <ol>
+            <ul>
                 <li> Custom Berry-Based Meal Plans: Tailored meal plans around various berries. </li>  
                 <li> Daily Updates: Daily tips and reminders for staying on track. </li>
                 <li> Weekly Coaching Sessions: Weekly coaching to keep you motivated. </li>
                 <li> Unlimited Mentor Support: Round-the-clock access to a mentor. </li>
                 <li> Exclusive Discounts on Berry Products: Special offers on berry-related items. </li>
-            </ol>
+            </ul>
             <h3> With Thando Moreleta as your mentor </h3>
             <button id = "Berry-btn"> Subscribe</button>
         </div>
         <div class="image">
-            <img src="/Images/BusiMentor.png" alt="Mentor Image">
+            <img src="../Images/BusiMentor.png" alt="Mentor Image">
         </div>
     </div>
     

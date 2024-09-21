@@ -10,14 +10,17 @@
     <title>Tropical</title>
 
     <script type="module">
-        import { initialise } from "./Javascript/navMenu.js";
+        import { initialise } from "../Javascript/navMenu.js";
         initialise("Pricing");
     </script> 
  
-    <link rel = "stylesheet" href = "/CSS/pricing.css">
+    <link rel = "stylesheet" href = "../CSS/pricing.css">
+    <link rel = "stylesheet" href = "../CSS/navBar.css">
+
 </head>
 <body>
     <header>
+        <img class = "logo" src = "../Images/Logo1.png" alt = "logo">
         <nav> 
 
         </nav>
@@ -26,20 +29,20 @@
     <div class="Plan-Card" id="plans-cards">
         <div class="content">
             <h1> Tropical Fruit Plan </h1>
-            <h2> You’ve selected the Premium Plan:</h2>
+            <h2> You’ve selected the Premium Plan for R180/pm:</h2>
             <p> This plan includes: </p>
-            <ol>
+            <ul>
                 <li> Personalized Tropical Fruit Meal Plans: Customized meal plans featuring tropical fruits. </li>  
                 <li> Shopping Lists: Easy weekly shopping lists for tropical ingredients. </li>
                 <li> Two Mentor Consultations: Two sessions each month for personalized guidance. </li>
                 <li> Fitness Tips: Exercise tips to pair with your tropical diet. </li>
                 <li> Exclusive Online Events: Access to webinars and live sessions. </li>
-            </ol>
+            </ul>
             <h3> With Kea Khumalo as your mentor </h3>
             <button id = "Tropical-btn"> Subscribe</button>
         </div>
         <div class="image">
-            <img src="/Images/KeaMentor.png" alt="Mentor Image">
+            <img src="../Images/KeaMentor.png" alt="Mentor Image">
         </div>
     </div>
 
