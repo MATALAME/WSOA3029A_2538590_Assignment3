@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');  
+
+.Plan-Card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FAF9F8; 
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    color: #000000;
+}
+
+.Plan-Card .content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.Plan-Card .image {
+    flex: 1;
+    text-align: center;
+}
+
+.Plan-Card h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+.Plan-Card h2, .Plan-Card h3, .Plan-Card p
+{
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.Plan-Card ol {
+    display: list-item;
+    padding-left: 0;
+    margin-left: 30px
+}
+
+.Plan-Card ol li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.Plan-Card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.Plan-Card button {
+    background-color: #1E3706;
+    color: white;
+    border: none;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 20px;
+    display: block;
+}
+
+#Berry-btn {
+    background-color: #6b2527; 
+}
+
+#Citrus-btn {
+    background-color: #eea60d; 
+   
+}
+
+#Tropical-btn {
+    background-color: #c97f3f; 
+
+}
+
+.Plan-Card button:hover {
+    background-color: #2f972c; 
+}
+

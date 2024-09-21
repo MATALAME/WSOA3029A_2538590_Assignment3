@@ -29,13 +29,23 @@ dietPlan.map(plan => {
     const card = document.createElement('article');
     card.classList.add('card');
 
+    // Define the page link based on the plan ID or name
+    let planPage = '';
+    if (plan.id === 1) {
+        planPage = '/Pricing/citrusPlan.html';
+    } else if (plan.id === 2) {
+        planPage = '/Pricing/tropicalPlan.html';
+    } else if (plan.id === 3) {
+        planPage = '/Pricing/berryPlan.html';
+    }
+
     card.innerHTML = `
         <img src="${plan.image}" alt="${plan.name}" />
         <div class="card-content">
             <h3>${plan.name}</h3>
             <p>${plan.description}</p>
             <p class="price">${plan.price}</p>
-            <button class="btn">See More</button>
+            <button class="btn" onclick="location.href='${planPage}'">See More</button>
         </div>
     `;
 

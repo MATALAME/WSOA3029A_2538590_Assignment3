@@ -8,6 +8,13 @@
     <meta property="og:description" content="A commercial website aimed at helping you eat healthier by including fruits into your meals, its a much healthier option. ">
     <meta property="og:type" content="Commercial Website">
     <title>Citrus</title>
+
+    <script type="module">
+        import { initialise } from "./Javascript/navMenu.js";
+        initialise("Pricing");
+    </script> 
+ 
+    <link rel = "stylesheet" href = "/CSS/pricing.css">
 </head>
 <body>
     <header>
@@ -16,9 +23,25 @@
         </nav>
     </header>
 
-    <section id = "Citrus-Plan">
-        
-    </section>
+    <div class="Plan-Card" id="plans-cards">
+        <div class="content">
+            <h1> Citrus Fruit Plan </h1>
+            <h2> You’ve selected the Basic Plan:</h2>
+            <p> This plan includes: </p>
+            <ol>
+                <li> Weekly Citrus-Based Meal Plans: Fresh, citrus-focused meal plans delivered weekly. </li>  
+                <li> Recipes: Simple, healthy citrus recipes to enhance your diet. </li>
+                <li> Nutritional Tips: Advice on optimizing health with citrus fruits. </li>
+                <li> Monthly Progress Check-In: Track your health improvements every month. </li>
+                <li> One Mentor Consultation: Monthly one-on-one session with a nutrition mentor. </li>
+            </ol>
+            <h3> With Jaden Simon as your mentor </h3>
+            <button id = "Citrus-btn"> Subscribe</button>
+        </div>
+        <div class="image">
+            <img src="/Images/JadenMentor.png" alt="Mentor Image">
+        </div>
+    </div>
     
 </body>
 </html>
