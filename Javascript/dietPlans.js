@@ -32,11 +32,11 @@ dietPlan.map(plan => {
     // Define the page link based on the plan ID or name
     let planPage = '';
     if (plan.id === 1) {
-        planPage = '/Pricing/citrusPlan.html';
+        planPage = '../Pricing/citrusPlan.html';
     } else if (plan.id === 2) {
-        planPage = '/Pricing/tropicalPlan.html';
+        planPage = '../Pricing/tropicalPlan.html';
     } else if (plan.id === 3) {
-        planPage = '/Pricing/berryPlan.html';
+        planPage = '../Pricing/berryPlan.html';
     }
 
     card.innerHTML = `
