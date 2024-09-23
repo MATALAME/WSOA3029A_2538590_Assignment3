@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap'); 
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.logo {
+    max-width: 150px;
+    margin-left: 50px;
+} 
+
+#Style-guide{
+    text-align: left;
+    padding: 0px 200px;
+}
+
+#Style-guide h2{
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    color: #000000;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+
+}
+
+#Style-guide img{
+    max-width: 100%;
+    height: auto;
+    margin-left: 0px;
+    padding-top: 0;
+    padding-bottom: 50px;
+}
+
+#Wireframes {
+    padding: 0px 200px;
+}
+
+#Wireframes h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    color: #000000;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+}
+
+#Wireframes h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: #000000;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+}
+
+.wireframe-item {
+    margin-bottom: 40px;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start; /* This align items at the top */
+    justify-content: space-between; /* This creates space between the text and image */
+}
+
+.content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+    max-width: 50%; 
+    margin-right: 20px; 
+}
+
+.content img {
+    max-width: 47%; 
+    height: auto;
+}
+
+#fonts{
+    text-align: left;
+    padding: 0px 200px;
+}
+
+#fonts h2{
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    color: #000000;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+}
+
+#fonts p{
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+    max-width: 1000px;
+    padding-top: 0px;
+    margin-bottom: 40px;
+}
+
+#Reflection{
+    text-align: left;
+    padding: 0px 200px;
+}
+
+#Reflection h2{
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    color: #000000;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+}
+
+#Reflection p{
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+    max-width: 1000px;
+    padding-top: 0px;
+    margin-bottom: 40px;
+}
+
+#Resources{
+    text-align: left;
+    padding: 0px 200px;
+}
+
+#Resources h2{
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    color: #000000;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+}
+
+#Resources p{
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+    max-width: 1000px;
+    padding-top: 0px;
+    margin-bottom: 40px;
+}
+
+#code{
+    text-align: left;
+    padding: 0px 200px;
+}
+
+#code h2{
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    color: #000000;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+}
+
+#code p{
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+    max-width: 1000px;
+    padding-top: 0px;
+    margin-bottom: 40px;
+}
+
+#challenges{
+    text-align: left;
+    padding: 0px 200px;
+}
+
+#challenges h2{
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    color: #000000;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+}
+
+#challenges p{
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+    max-width: 1000px;
+    padding-top: 0px;
+    margin-bottom: 40px;
+}
+
+footer {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 14px;
+    color: #555;
+}
+
+.BacktoTop{
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
+    padding-bottom: 40px;
+}
+
+#TopBtn {
+    background-color: #3b6021;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+#TopBtn:hover {
+    background-color: #00b333;
+}
+
+
+
+
+
+
+

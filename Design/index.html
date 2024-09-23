@@ -9,6 +9,15 @@
     <meta property="og:type" content="Commercial Website">
     <title>Design</title>
 </head>
+
+    <script type="module">
+        import { initialise } from "../Javascript/navMenu.js";
+        initialise("Design");
+    </script> 
+
+    <link rel = "stylesheet" href = "../CSS/designPage.css">
+    <link rel = "stylesheet" href = "../CSS/navBar.css">
+
 <body>
     <header>
         <img class = "logo" src = "../Images/Logo1.png" alt = "logo">
@@ -17,8 +26,72 @@
         </nav>
     </header>
 
-    <h1> DESIGN SECTION</h1>
+    <section id = "Style-guide">
+        <h2> Style Guide</h2>
+        <img src = "../Images/StyleGuide.jpg">
+    </section>
 
+    <section id="Wireframes">
+        <h2>Wireframes</h2>
+        <div id="wireframe-list"></div>
+    </section>
+    
+
+    <section id = "fonts">
+        <h2> Fonts</h2>
+        <p> I chose the Poppins because I felt like it’s a great choice for my fruit-based website because of its modern, clean aesthetic and high 
+            readability, making the website’s content accessible across devices. Its sans-serif font and it gives a fresh, contemporary feel, which
+            fits perfectly with the health and lifestyle themes I'm promoting. The font has a neutral, friendly look that helps create an inviting 
+            experience for users, encouraging healthy eating habits. Plus, with the di0erent weights, I can easily highlight key sections like fruit 
+            benefits or subscription plans to bring to attention to important information.</p>
+    </section>
+
+    <section id = "Reflection">
+        <h2> Reflection</h2>
+        <p> I searched for many different APIs to use for my website and spent hours trying to understand what live APIs meant. I initially assumed that 'live' meant 
+            APIs that updated daily, which led me to find fewer free online APIs, as many were restricted and only allowed limited data access. The lecturer clarified 
+            what was meant by 'live' APIs and I eventually found a GitHub repository with a list of public APIs, where I discovered the one I wanted to use in the food 
+            section, specifically focused on fruits. </p>
+        <p> The API includes properties and characteristics of fruits, such as fat, protein, sugar, and more. I decided to create a fruit subscription website that 
+            combines health with convenience. Drawing inspiration from the data-driven insights of the API, I aimed to build a platform that educates and also encourages 
+            healthy living through fruit consumption. I realized I could tell a compelling story about the health benefits of different fruit groups. 
+            My goal is to offer a seamless and enjoyable experience where users can access valuable information and engage with content, such as recipes, fitness 
+            tips, and coaching making healthy choices simple, and accessible.</p>
+    </section>
+
+    <section id = "Resources"> 
+        <h2> Resources</h2>
+        <p> To achieve the clean, modern aesthetic I envisioned for the website, I spent time browsing royalty-free image websites, specifically searching for high quality 
+            fruit images. Most of the images I selected were sourced from the Freepik website, which offered multiple collections of images that aligned with my design goals. 
+            To further refine the look and ensure consistency with my branding, I edited the chosen images in Photoshop. Adjusting colours, enhancing details, and 
+            overlaying custom text. For example, on the "UNLOCK" page, I added the headline "Explore the Health Benefits of Fruits!" to create a visually striking yet 
+            informative element that invites users to dive deeper into the content. These edits helped to improve the overall presentation, ensuring the imagery was both engaging and 
+            aligned with the website’s goal of promoting healthy living through fruit consumption. </p>
+    </section>
+
+    <section id = "code"> 
+        <h2> Code</h2>
+        <p> For some of the functions and styling on the website, I reused code from a previous assignment to manage my time. There were crucial elements, such as the navigation bar, 
+            that I wanted to reuse. I also added new features, like a slight resize effect when hovering over certain cards, dynamically added buttons, and a background color change when 
+            hovering over a button. </p>
+    </section>
+
+    <section id = "challenges"> 
+        <h2> Challenges</h2>
+        <p> The first challenge I faced was finding a suitable API. I had to look through numerous APIs, each with different pricing, and many of them lacked clear and straightforward 
+            documentation. This made the selection process more time-consuming. Another issue was with the navigation bar. I reused code from a previous project, but the script failed 
+            to work because the file path was too long, it was buried within multiple folders, causing the ‘root’ directory issue. Additionally, working with D3.js presented some difficulties. 
+            Although the syntax was a bit complex to grasp initially, the examples we covered in class made it easier to implement certain features.</p>
+    </section>
+
+    <script src = "/Javascript/wireframes.js"></script> 
+
+
+    <div class="BacktoTop">
+        <button id="TopBtn">Back To Top</button>
+    </div>
+
+    <script src = "../Javascript/backTotop.js"></script>
     <footer>
         <section style="height: 50px;">
             <p> Brought to you by Matalame Mamabolo</p>
