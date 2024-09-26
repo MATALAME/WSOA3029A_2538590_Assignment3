@@ -29,7 +29,6 @@ dietPlan.map(plan => {
     const card = document.createElement('article');
     card.classList.add('card');
 
-    // Define the page link based on the plan ID or name
     let planPage = '';
     if (plan.id === 1) {
         planPage = '../Pricing/citrusPlan.html';
