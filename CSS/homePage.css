@@ -31,7 +31,7 @@ header {
 }
 
 .Home-info h1 {
-    font-size: 35px;
+    font-size: 40px;
     color: #000000;
     font-weight: 700;
     letter-spacing: 2px;
@@ -124,17 +124,20 @@ header {
     text-align: center;
 }
 
+.Goal-Card h2{
+    font-size: 50px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.Goal-Card p{
+    font-size: 16px;
+}
 .Goal-Card h2, .Goal-Card h3, .Goal-Card p
 {
     font-family: 'Poppins', sans-serif;
     margin-bottom: 10px;
     margin-left: 60px;
-}
-
-.Goal-Card h2{
-    font-size: 35px;
-    margin-top: 25px;
-    margin-bottom: 15px;
 }
 
 .Goal-Card ul li {
