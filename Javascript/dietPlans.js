@@ -38,15 +38,15 @@ dietPlan.map(plan => {
         planPage = '../Pricing/berryPlan.html';
     }
 
-    card.innerHTML = `
-        <img src="${plan.image}" alt="${plan.name}" />
+    card.innerHTML = 
+        `<img src="${plan.image}" alt="${plan.name}" />
         <div class="card-content">
             <h3>${plan.name}</h3>
             <p>${plan.description}</p>
             <p class="price">${plan.price}</p>
             <button class="btn" onclick="location.href='${planPage}'">SEE MORE</button>
-        </div>
-    `;
+        </div>`
+    ;
 
     container.appendChild(card);
 });
