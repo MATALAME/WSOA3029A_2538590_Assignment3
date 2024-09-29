@@ -78,14 +78,25 @@ header {
     background-color: #6b2527; 
 }
 
+#Berry-btn:hover {
+    background-color: #ab2828; 
+}
+
 #Citrus-btn {
     background-color: #eea60d; 
    
 }
 
+#Citrus-btn:hover {
+    background-color: #df8301; 
+}
+
 #Tropical-btn {
     background-color: #c97f3f; 
+}
 
+#Tropical-btn:hover {
+    background-color: #eea60d; 
 }
 
 .Plan-Card button:hover {

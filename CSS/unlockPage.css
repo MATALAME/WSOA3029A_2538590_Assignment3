@@ -175,6 +175,7 @@ header {
     flex: 1 1 calc(33.33% - 40px);
     box-sizing: border-box;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* for smooth scaling and shadow transition of the card*/
+    margin-bottom: 100px;
 }
 
 .card:hover {

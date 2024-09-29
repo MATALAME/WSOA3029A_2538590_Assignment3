@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 #footerItem {
-    background-color: #f0f0f0; 
+    background-color: #f3f3f3; 
     padding: 20px; 
     text-align: center;
     font-family: "Montserrat", sans-serif;
 }
 
 #footerItem .container {
-    max-width: auto; 
+    max-width: 1200px;  /* Add 'px' to specify units */
     margin: 0 auto; 
+    padding: 0 20px;  /* Add horizontal padding to prevent edge-to-edge text */
 }
 
 #footerItem .footer-content {
@@ -27,6 +28,7 @@
     font-size: 50px;
     margin: 7px 0; 
 }
+
 #footerItem .contact-info p {
     margin: 7px 0; 
 }
