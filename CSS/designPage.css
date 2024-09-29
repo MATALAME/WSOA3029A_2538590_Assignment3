@@ -206,17 +206,6 @@ header {
     margin-bottom: 40px;
 }
 
-footer {
-    background-color: #f8f8f8;
-    text-align: center;
-    padding: 20px;
-}
-
-footer p {
-    font-size: 14px;
-    color: #555;
-}
-
 .BacktoTop{
     display: flex;
     justify-content: center; 

@@ -193,15 +193,3 @@ header {
     color: #333;
     font-family: 'Poppins', sans-serif;
 }
-
-/* Footer */
-footer {
-    background-color: #f8f8f8;
-    text-align: center;
-    padding: 20px;
-}
-
-footer p {
-    font-size: 14px;
-    color: #555;
-}
