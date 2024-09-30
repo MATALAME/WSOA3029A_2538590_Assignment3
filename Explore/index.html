@@ -3,11 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fruityvice API Example</title>
+    <title>Explore</title>
+
+    <script type="module">
+        import { initialise } from "../Javascript/navMenu.js";
+        initialise("Explore");
+    </script> 
+
+    <link rel = "stylesheet" href = "../CSS/explorePage.css"> 
+    <link rel = "stylesheet" href = "../CSS/navBar.css"> 
+
+
 </head>
 <body>
+    <header>
+        <img class = "logo" src = "../Images/Logo1.png" alt = "logo">
+        <nav>
+
+        </nav>
+    </header>
+
     <h1>Fruits List</h1>
     <ul id="fruit-list"></ul>
+
+    <script src = " https://cdn.jsdelivr.net/npm/d3-scale-chromatic@3.0.0/dist/d3-scale-chromatic.min.jsLinks to an external site."></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+
+    <button id = "split"> Split</button>
+    <button id = "combine"> Combine</button>
+    <section id = "force"></section>
+
+    <div id="tooltip" style="position: absolute; visibility: hidden; background-color: lightgray; padding: 5px; border-radius: 5px;"></div>
 
     <script src = "../Javascript/bubbleDiagram.js" ></script>
 </body>
