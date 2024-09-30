@@ -8,9 +8,9 @@
 }
 
 #footerItem .container {
-    max-width: 1200px;  /* Add 'px' to specify units */
+    max-width: 1200px; 
     margin: 0 auto; 
-    padding: 0 20px;  /* Add horizontal padding to prevent edge-to-edge text */
+    padding: 0 20px;  
 }
 
 #footerItem .footer-content {
@@ -48,4 +48,9 @@
         margin-top: 10px;
         width: 100%; 
     }
+
+    #footerItem h2 {
+        display: none; /* The h2 kept overlapping on the paragraph text and it struggled to make it work, so I decided to remove the h2 on smaller screens to avoid the overlap */
+    }
 }
+

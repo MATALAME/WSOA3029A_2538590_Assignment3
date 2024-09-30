@@ -23,9 +23,12 @@ export function initialise(currentPage) {
             a.setAttribute("href", menuItem.href);
             li.appendChild(a);
         } else {
-            li.innerText = menuItem.name;
-            li.classList.add("current-page");
+            a.innerText = menuItem.name;
+            a.setAttribute("href", menuItem.href);
+            a.classList.add("current-page"); 
+            li.appendChild(a);
         }
+        
 
         ul.appendChild(li);
     }

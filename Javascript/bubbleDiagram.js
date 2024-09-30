@@ -17,3 +17,4 @@ fetch('https://cors-anywhere.herokuapp.com/https://www.fruityvice.com/api/fruit/
     .catch(error => {
         console.error('Error fetching fruits:', error);
     });
+

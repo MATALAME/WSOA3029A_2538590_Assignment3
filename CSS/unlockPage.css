@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
 body {
     font-family: "Poppins", sans-serif;
@@ -21,9 +21,9 @@ header {
     margin-left: 50px;
 } 
 
-.Fruit-info{
+.Fruit-info {
     text-align: left;
-    padding:0px 200px;
+    padding: 0px 200px;
     background-color: #fff;
 }
 
@@ -42,10 +42,10 @@ header {
     color: #000000;
     font-weight: 700;
     letter-spacing: 2px;
-    padding-bottom: 20px;;
+    padding-bottom: 20px;
 }
 
-.Fruit-info p{
+.Fruit-info p {
     font-size: 16px;
     line-height: 1.6;
     color: #000000;
@@ -57,12 +57,12 @@ header {
 .Fruit-info img {
     max-width: 85%;
     height: auto;
-    /*border-radius: 10px;*/
+    /*border-radius: 10px; */
     margin-left: 0px;
     padding-top: 0;
 }
 
-.Benefits{
+.Benefits {
     text-align: left;
     padding: 40px 200px;
     background-color: #fff;
@@ -76,7 +76,7 @@ header {
     padding-bottom: 20px;
 }
 
-.Benefits ol li{
+.Benefits ol li {
     font-size: 16px;
     line-height: 1.6;
     color: #000000;
@@ -86,7 +86,7 @@ header {
     margin-bottom: 20px;
 }
 
-.Subscribe{
+.Subscribe {
     text-align: left;
     padding: 40px 200px;
     background-color: #fff;
@@ -97,7 +97,7 @@ header {
     color: #000000;
     font-weight: 700;
     letter-spacing: 2px;
-    padding-bottom: 20px;;
+    padding-bottom: 20px;
 }
 
 .Subscribe p {
@@ -122,18 +122,17 @@ header {
 .Subscribe img {
     max-width: 80%;
     height: auto;
-    /*border-radius: 10px;*/
     margin-left: 0px;
     padding-top: 0;
 }
 
-.Buy-info{
+.Buy-info {
     text-align: left;
     padding: 0px 150px; 
     background-color: #fff;
 }
 
-.Buy-info h1{
+.Buy-info h1 {
     font-size: 35px;
     color: #000000;
     font-weight: 700;
@@ -142,14 +141,14 @@ header {
     margin-left: 95px;
 }
 
-.Buy-info h2{
+.Buy-info h2 {
     font-size: 20px;
     color: #000000;
     letter-spacing: 2px;
     margin-left: 95px;
 }
 
-.Buy-info p{
+.Buy-info p {
     font-size: 16px;
     color: #000000;
     letter-spacing: 2px;
@@ -174,13 +173,13 @@ header {
     margin: 20px;
     flex: 1 1 calc(33.33% - 40px);
     box-sizing: border-box;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* for smooth scaling and shadow transition of the card*/
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* This is for smooth scaling and the shadow transition of the card*/
     margin-bottom: 100px;
 }
 
 .card:hover {
-    transform: scale(1.05); /* This slightly increases the size of the card when the hovering begins*/
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adds a little shadow for a pop-out effect */
+    transform: scale(1.05); /* This creates that slight increase of size of the card when the user hovers over the card*/
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adds a little shadow to give that pop-out effect on hover*/ 
 }
 
 .card img {
@@ -227,7 +226,7 @@ header {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    margin: 5px auto; /* Center the button */
+    margin: 5px auto;
     border: none;
     cursor: pointer;
 }
@@ -239,4 +238,54 @@ header {
 .logo {
     max-width: 150px;
     margin-left: 50px;
-} 
+}
+
+/* Media Queries */
+@media (max-width: 1024px) { /* For the tablet */
+    .Fruit-info, .Benefits, .Subscribe, .Buy-info {
+        padding: 20px;
+    }
+
+    .Fruit-info h1, .Buy-info h1 {
+        font-size: 28px;
+    }
+
+    .Fruit-info h2, .Buy-info h2, .Benefits h2, .Subscribe h2 {
+        font-size: 24px;
+    }
+
+    .Fruit-info p, .Buy-info p, .Benefits ol li, .Subscribe p {
+        font-size: 14px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) { /* For mobile view */
+    .Fruit-info, .Benefits, .Subscribe, .Buy-info {
+        padding: 10px;
+    }
+
+    .Fruit-info h1, .Buy-info h1 {
+        font-size: 24px;
+    }
+
+    .Fruit-info h2, .Buy-info h2, .Benefits h2, .Subscribe h2 {
+        font-size: 20px;
+    }
+
+    .Fruit-info p, .Buy-info p, .Benefits ol li, .Subscribe p {
+        font-size: 12px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .logo {
+        max-width: 100px;
+        margin-left: 20px;
+    }
+}

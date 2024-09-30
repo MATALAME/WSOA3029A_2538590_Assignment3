@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap'); 
 
-
 body {
     font-family: "Poppins", sans-serif;
     margin: 0;
@@ -9,7 +8,6 @@ body {
     background-color: #fff;
 }
 
-/* Header Styles */
 header {
     display: flex;
     justify-content: space-between;
@@ -21,35 +19,38 @@ header {
 .logo {
     max-width: 150px;
     margin-left: 50px;
-} 
+}
 
-/* Section for Home-info */
+/* Home-info */
 .Home-info {
-    text-align: left;
-    padding: 40px 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 150px;
     background-color: #fff;
 }
 
-.Home-info h1 {
+.text-content {
+    max-width: 600px;
+}
+
+.text-content h1 {
     font-size: 40px;
-    color: #000000;
+    color: #000;
     font-weight: 700;
     letter-spacing: 2px;
-    max-width: 600px;
-    padding-top: 50px;
-    padding-bottom: 20px;;
+    margin: 0;
+    padding-top: 0px;
 }
 
-.Home-info p {
+.text-content p {
     font-size: 16px;
     line-height: 1.6;
-    color: #000000;
-    max-width: 605px;
-    padding-top: 0px;
-    margin-bottom: 10px;
+    color: #000;
+    margin: 20px 0;
 }
 
-.Home-info button {
+.text-content button {
     background-color: #3b6021;
     color: #fff;
     border: none;
@@ -57,20 +58,15 @@ header {
     border-radius: 50px;
     font-size: 18px;
     cursor: pointer;
-    margin-top: 20px;
 }
 
-.Home-info button:hover {
+.text-content button:hover {
     background-color: #2b4516;
 }
 
-.Home-info img {
-    max-width: 54%;
+.image-content img {
+    max-width: 100%;
     height: auto;
-    /*border-radius: 10px;*/
-    margin-top: -440px;
-    margin-left: 600px;
-    padding-top: 0;
 }
 
 #CEO {
@@ -89,7 +85,7 @@ header {
 #CEO img {
     width: 150px; 
     height: 150px; 
-    border-radius: 50%; /* This section of the code makes the CEO pciture become a circle */
+    border-radius: 50%; /* This section of the code makes the CEO picture become a circle */
     object-fit: cover; /* The picture had a weird stretch so this line makes it fit properly */
     margin-bottom: 15px; 
 }
@@ -124,17 +120,17 @@ header {
     text-align: center;
 }
 
-.Goal-Card h2{
+.Goal-Card h2 {
     font-size: 50px;
     margin-top: 25px;
     margin-bottom: 15px;
 }
 
-.Goal-Card p{
+.Goal-Card p {
     font-size: 16px;
 }
-.Goal-Card h2, .Goal-Card h3, .Goal-Card p
-{
+
+.Goal-Card h2, .Goal-Card h3, .Goal-Card p {
     font-family: 'Poppins', sans-serif;
     margin-bottom: 10px;
     margin-left: 60px;
@@ -171,7 +167,7 @@ header {
     color: #000000;
 }
 
-#Sponsors h2{
+#Sponsors h2 {
     font-size: 50px;
     margin-top: 25px;
     margin-bottom: 15px;
@@ -192,4 +188,95 @@ header {
     font-size: 16px;
     color: #333;
     font-family: 'Poppins', sans-serif;
+}
+
+/* Media Queries */
+
+@media (min-width: 1200px) { /* For the laptop */
+    .Home-info {
+        padding: 10px 150px;
+    }
+
+    .Goal-Card {
+        max-width: 1300px;
+    }
+}
+
+@media (max-width: 992px) { /* For the tablet */
+    .Home-info {
+        flex-direction: column;
+        padding: 10px 50px;
+        align-items: center;
+    }
+
+    .text-content h1 {
+        font-size: 32px;
+    }
+
+    .text-content p {
+        font-size: 14px;
+    }
+
+    .text-content button {
+        padding: 8px 30px;
+        font-size: 16px;
+    }
+
+    .Goal-Card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .Goal-Card h2 {
+        font-size: 36px;
+        margin-left: 0;
+    }
+
+    .Goal-Card p {
+        font-size: 14px;
+    }
+
+    .Goal-Card ul li {
+        margin-left: 0;
+    }
+
+    #CEO h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 768px) { /* For the phone */
+    .Home-info {
+        padding: 10px;
+    }
+
+    .text-content h1 {
+        font-size: 20px;
+    }
+
+    .text-content p {
+        font-size: 12px;
+    }
+
+    .text-content button {
+        padding: 8px 20px;
+        font-size: 10px;
+    }
+
+    #CEO h2 {
+        font-size: 20px;
+    }
+
+    #CEO img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .Goal-Card h2 {
+        font-size: 20px;
+    }
+
+    .sponsor-item img {
+        width: 100px; 
+    }
 }

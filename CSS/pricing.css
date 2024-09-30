@@ -38,8 +38,7 @@ header {
     margin-bottom: 10px;
     margin-left: 60px;
 }
-.Plan-Card h2, .Plan-Card h3, .Plan-Card p
-{
+.Plan-Card h2, .Plan-Card h3, .Plan-Card p {
     font-family: 'Poppins', sans-serif;
     margin-bottom: 10px;
     margin-left: 60px;
@@ -84,7 +83,6 @@ header {
 
 #Citrus-btn {
     background-color: #eea60d; 
-   
 }
 
 #Citrus-btn:hover {
@@ -106,4 +104,57 @@ header {
 .logo {
     max-width: 150px;
     margin-left: 50px;
-} 
+}
+
+/* Media Queries */
+
+@media (min-width: 1200px) { /* Laptop sizes */
+    .Plan-Card {
+        max-width: 1100px;
+    }
+}
+
+@media (max-width: 992px) { /* Tablet sizes */
+    .Plan-Card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .Plan-Card h1 {
+        font-size: 40px;
+        margin-left: 0;
+    }
+
+    .Plan-Card h2, .Plan-Card h3, .Plan-Card p, .Plan-Card ul li {
+        font-size: 18px;
+        margin-left: 0;
+    }
+
+    .Plan-Card button {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) { /* Phone sizes */
+    .Plan-Card {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .Plan-Card h1 {
+        font-size: 32px;
+    }
+
+    .Plan-Card h2, .Plan-Card h3, .Plan-Card p, .Plan-Card ul li {
+        font-size: 14px;
+    }
+
+    .Plan-Card img {
+        max-width: 100%;
+    }
+
+    .Plan-Card button {
+        padding: 8px 30px;
+        font-size: 14px;
+    }
+}
