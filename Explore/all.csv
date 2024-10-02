@@ -1,4 +1,6 @@
-﻿"name","id","family","order","genus","nutritions__calories","nutritions__fat","nutritions__sugar","nutritions__carbohydrates","nutritions__protein"
+﻿
+
+"name","id","family","order","genus","nutritions__calories","nutritions__fat","nutritions__sugar","nutritions__carbohydrates","nutritions__protein"
 "Persimmon","52","Ebenaceae","Rosales","Diospyros","81","0.0","18.0","18.0","0.0"
 "Strawberry","3","Rosaceae","Rosales","Fragaria","29","0.4","5.4","5.5","0.8"
 "Banana","1","Musaceae","Zingiberales","Musa","96","0.2","17.2","22.0","1.0"

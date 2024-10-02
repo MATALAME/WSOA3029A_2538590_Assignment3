@@ -12,6 +12,9 @@
 
     <link rel = "stylesheet" href = "../CSS/explorePage.css"> 
     <link rel = "stylesheet" href = "../CSS/navBar.css"> 
+    
+    <script src = " https://cdn.jsdelivr.net/npm/d3-scale-chromatic@3.0.0/dist/d3-scale-chromatic.min.jsLinks to an external site."></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 
 
 </head>
@@ -23,18 +26,26 @@
         </nav>
     </header>
 
-    <h1>Fruits List</h1>
-    <ul id="fruit-list"></ul>
+    <section id = "Data-Viz">
+    <h1>Explore Fruits</h1>
+    <h2> Discover the Nutritional Delights Fruits Have to Offer</h2>
+    <p> Find the Perfect Fruits to Suit Your Taste and Health Objectives</p>
+    </section>
 
-    <script src = " https://cdn.jsdelivr.net/npm/d3-scale-chromatic@3.0.0/dist/d3-scale-chromatic.min.jsLinks to an external site."></script>
-    <script src = "https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <section id = "Buttons">
+    <button id = "combine"> ALL</button>
+    <button id = "split"> WEIGHT MANAGEMENT</button>
+    </section>
+   
 
-    <button id = "split"> Split</button>
-    <button id = "combine"> Combine</button>
-    <section id = "force"></section>
+    <section id = "force">
+
+    </section>
 
     <div id="tooltip" style="position: absolute; visibility: hidden; background-color: lightgray; padding: 5px; border-radius: 5px;"></div>
 
+
     <script src = "../Javascript/bubbleDiagram.js" ></script>
+
 </body>
 </html>
