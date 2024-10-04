@@ -18,7 +18,7 @@ function createScatterPlot(data) {
     }));
 
     //3. Create Margins
-    const margin = { top: 20, right: 30, bottom: 40, left: 40 }; //This creates a margin object that's used to set the amount of space surrounding the visualization's main content 
+    const margin = { top: 20, right: 30, bottom: 40, left: 100 }; //This creates a margin object that's used to set the amount of space surrounding the visualization's main content 
     const WIDTH = 1300 - margin.left - margin.right;
     const HEIGHT = 600 - margin.top - margin.bottom;
 
@@ -26,7 +26,7 @@ function createScatterPlot(data) {
     let svg = d3.select("#scatter")
         .append("svg")
         .attr("width", WIDTH + margin.left + margin.right)
-        .attr("height", HEIGHT + margin.top + margin.bottom + 30) //The SVG was cutting off the heading for the x axis, so I added 30 pixels to allow more room for the heading
+        .attr("height", HEIGHT + margin.top + margin.bottom + 50) //The SVG was cutting off the heading for the x axis, so I added 30 pixels to allow more room for the heading
         .append("g")
         .attr("transform", `translate(${margin.left + 50},${margin.top})`);
 
@@ -148,4 +148,48 @@ document.getElementById("high-sugar").addEventListener("click", () => filterData
 document.getElementById("low-carb").addEventListener("click", () => filterData('low-carb'));
 document.getElementById("high-carb").addEventListener("click", () => filterData('high-carb'));
 
+const carbsRange = ["0 - 5g", "5g - 10g", "10g - 15g", "15g - 20g"];
+ 
+function createLegend() {
+    const legendWidth = 20; 
+    const legendHeight = 20; 
+    const legendSpacing = 10; 
+    const legendX = WIDTH - 200;  
+    const legendY = 150;  
+
+    const legend = svg.append("g")
+      .attr("class", "legend")
+      .attr("transform", `translate(${legendX}, ${legendY})`);
+
+    svg.append("text")
+      .attr("x", legendX) 
+      .attr("y", legendY - 20) 
+      .attr("font-size", "16px") 
+      .attr("font-weight", "bold") 
+      .text("Carbohydrates");
+  
+    // Colour for each carb range
+    legend.selectAll("rect")
+      .data(colorScale.range())  // Refering to the colour range we created. 
+      .enter()
+      .append("rect")
+      .attr("x", 0)
+      .attr("y", (d, i) => i * (legendHeight + legendSpacing))  //Puts the colours in a rectangle
+      .attr("width", legendWidth)
+      .attr("height", legendHeight)
+      .style("fill", d => d);  
+  
+    // Labels for each carb range
+    legend.selectAll("text")
+      .data(carbsRange)  // Bind the carbs range labels
+      .enter()
+      .append("text")
+      .attr("x", legendWidth + 10)  // I struggled to put the text next to the respective colour box, I asked AI because I was struggling, it explained to me that since the width is 20, I needed to add additional pixels to ensure that its not positioned at the edge of the box. So I added 10 to give better readability.
+      .attr("y", (d, i) => i * (legendHeight + legendSpacing) + legendHeight / 1.5)  // Aligns the text vertically
+      .text(d => d)  
+      .attr("font-size", "14px")
+      .attr("fill", "#000");  
+  }
+  
+  createLegend();
 }
