@@ -8,7 +8,6 @@ body {
     background-color: #fff;
 }
 
-/* Header Styles */
 header {
     display: flex;
     justify-content: space-between;
@@ -91,4 +90,27 @@ header {
 
 #combine:hover, #split:hover {
     background-color: #00b333;  
+}
+
+#Data-Viz2 {
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 150px;
+    background-color: #fff;
+}
+
+#Data-Viz2 h2{
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    color: #000000;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+}
+
+#Data-Viz2 p{
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000;
+    margin: 5px 0;
 }
