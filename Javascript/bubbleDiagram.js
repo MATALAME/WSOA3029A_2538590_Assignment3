@@ -202,10 +202,6 @@ function createLegend() {
 }
 
 
-//Second visualization// 
-
-
-
 
 
 
