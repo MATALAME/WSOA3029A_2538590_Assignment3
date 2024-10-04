@@ -62,7 +62,7 @@ function createBubbles(data) {
       .append("circle")
       .attr("r", d => rScale(d.nutritions.calories))
       .attr("cy", d => HEIGHT / 2 - 30)
-      .style("fill", d => colorScale(d.nutritions.calories))  // Apply the color scale
+      .style("fill", d => colorScale(d.nutritions.calories)) 
       .style("visibility", "visible");
 
 

@@ -125,3 +125,87 @@ header {
     border-radius: 8px;
     pointer-events: none; /* Prevents the tooltip from interfering with mouse events */
 }
+
+#filter-buttons {
+    display: flex;               
+    justify-content: center;    
+    align-items: center;         
+    padding: 20px;            
+}
+
+#all{
+    margin: 10px;               
+    padding: 10px 20px;        
+    border: none;               
+    border-radius: 5px;         
+    cursor: pointer;           
+    font-size: 14px;           
+    background-color: #3b6021; 
+    color: #fff;               
+}
+
+#all:hover{
+    background-color: #00b333;  
+}
+
+#low-sugar{
+    margin: 10px;               
+    padding: 10px 20px;        
+    border: none;               
+    border-radius: 5px;         
+    cursor: pointer;           
+    font-size: 14px;           
+    background-color: #3b6021; 
+    color: #fff;               
+}
+
+#low-sugar:hover{
+    background-color: #00b333;  
+}
+
+#high-sugar{
+    margin: 10px;               
+    padding: 10px 20px;        
+    border: none;               
+    border-radius: 5px;         
+    cursor: pointer;           
+    font-size: 14px;           
+    background-color: #3b6021; 
+    color: #fff;               
+}
+
+#high-sugar:hover{
+    background-color: #00b333;  
+}
+
+#low-carb{
+    margin: 10px;               
+    padding: 10px 20px;        
+    border: none;               
+    border-radius: 5px;         
+    cursor: pointer;           
+    font-size: 14px;           
+    background-color: #3b6021; 
+    color: #fff;               
+}
+
+#low-carb:hover{
+    background-color: #00b333;  
+}
+
+#high-carb{
+    margin: 10px;               
+    padding: 10px 20px;        
+    border: none;               
+    border-radius: 5px;         
+    cursor: pointer;           
+    font-size: 14px;           
+    background-color: #3b6021; 
+    color: #fff;               
+}
+
+#high-carb:hover{
+    background-color: #00b333;  
+}
+
+
