@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap'); 
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.logo {
+    max-width: 150px;
+    margin-left: 50px;
+} 
+
+h1 {    
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 150px;
+    background-color: #fff;
+    font-size: 35px;
+    color: #000000;
+    font-weight: 700;
+    letter-spacing: 2px;
+    max-width: 600px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+#pay-Options {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 5px; 
+    text-align: center;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+#pay-Options img {
+    width: 200px;
+    height: auto;
+}
+
+
+#Buttons {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 350px; 
+    margin-top: 20px; 
+}
+
+#Dropdown {
+    width: 250px; 
+    padding: 10px; 
+    border: 2px solid #ccc; 
+    border-radius: 5px; 
+    background-color: #f9f9f9; 
+    font-size: 16px; 
+    color: #333; 
+    cursor: pointer; 
+}
+
+
+#Dropdown:hover {
+    background-color: #e6f7ff; 
+}
+
+#Dropdown:focus {
+    outline: none; 
+    border-color: #007BFF; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+
+.main-container {
+    display: flex; 
+    align-items: flex-start; 
+    margin-left: 350px; 
+    margin-top: 20px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column; 
+    max-width: 400px; 
+    width: 100%; 
+    height: auto; 
+}
+
+#item-container {
+    flex: 0.5; 
+    text-align: center; 
+    padding: 10px 60px; 
+    margin-left: 50px;
+    background-color: #f9f9f9; 
+}
+
+.item-flex-container {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+
+.item-flex-container img {
+    max-width: 100px; 
+    height: auto; 
+    margin-right: 10px;
+}
+
+
+.item-details {
+    text-align: left; 
+}
+
+.item-details p {
+    margin: 5px 0; 
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: left; 
+    margin-bottom: 20px; 
+}
+
+.form-group input {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%; 
+    outline: none;
+}
+
+.form-group p {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.row-container {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+}
+
+.row-container .form-group {
+    width: 48%; 
+}

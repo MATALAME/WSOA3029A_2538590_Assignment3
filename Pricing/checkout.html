@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="Matalame's website for Interactive Media WSOA3028A">
+    <meta name="author" content="Matalame Mamabolo">
+    <meta name="keywords" content="Card, Debit, Credit, Pay, Visa, Pay Pal">
+    <meta property="og:title" content="Checkout">
+    <meta property="og:description" content="A commercial website aimed at helping you eat healthier by including fruits into your meals, its a much healthier option. ">
+    <meta property="og:type" content="Commercial Website">
+    <title>Checkout</title>
+
+    <script type="module">
+        import { initialise } from "../Javascript/navMenu.js";
+        initialise("Pricing");
+    </script> 
+
+    <link rel = "stylesheet" href = "../CSS/checkout.css">
+    <link rel = "stylesheet" href = "../CSS/navBar.css">
+
+
+</head>
+<body>
+    <header>
+        <img class = "logo" src = "../Images/Logo1.png" alt = "logo">
+        <nav>
+
+        </nav>
+    </header>
+
+    <h1> FRUITS.CO</h1>
+
+    <div id = "pay-Options">
+        <img src = "../Images/Visa.png" alt = "VISA Logo">
+        <img src = "../Images/ApplePay.png" alt = "Apple Pay Logo">
+        <img src = "../Images/PayPal2.png"alt = "Pay Pal Logo">
+    </div>
+
+    <div id="Buttons">
+        <select id="Dropdown">
+            <option value="citrus-Select">Citrus Subscription Plan</option>
+            <option value="tropical-Select">Tropical Subscription Plan</option>
+            <option value="berry-Select">Berry Subscription Plan</option>
+        </select>
+    </div>
+
+    <div class="main-container">
+        <div class="form-container">
+            <div class="row-container">
+                <div class="form-group">
+                    <p>Name</p>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <p>Last Name</p>
+                    <input type="text">
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <p>Email</p>
+                <input type="text">
+            </div>
+    
+            <div class="form-group">
+                <p>Phone</p>
+                <input type="text">
+            </div>
+    
+            <div class="form-group">
+                <p>Address</p>
+                <input type="text">
+            </div>
+    
+            <div class="form-group">
+                <p>City</p>
+                <input type="text">
+            </div>
+        </div>
+    
+        <section id="item-container">
+            <div class="item-flex-container"> 
+                <img id="plan-image" src="../Images/berryCheckout.jpg" alt="Berry Plan">
+                <div class="item-details"> 
+                    <p id="plan-name">Berry Plan (Elite Plan)</p>
+                    <p id="plan-price">Price: R220/pm</p>
+                </div>
+            </div>
+        </section>
+    
+
+<script src = "../Javascript/checkout.js"></script>
+
+</body>
+</html>
