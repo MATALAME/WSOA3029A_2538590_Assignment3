@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    overflow: hidden;  /*This makes the page non-scrollable, I did this because this is the end point in the website and there isn't anything the user can see.*/
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.logo {
+    max-width: 150px;
+    margin-left: 50px;
+} 
+
+h2 {
+    text-align: center; 
+    margin-top: 100px;
+}
+
+#image-container {
+    text-align: center;
+}
+
+#image-container img {
+    margin-top: -0px;
+    max-width: 40%; 
+    height: auto;
+}

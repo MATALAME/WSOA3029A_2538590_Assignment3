@@ -67,7 +67,8 @@ function createScatterPlot(data) {
     // 7. Create tooltip
     const tooltip = d3.select("body").append("div")
         .attr("class", "tooltip")
-        .style("visibility", "hidden"); // Initially hidden
+        .style("visibility", "hidden")
+        .style("font-size", "16px"); // Initially hidden
 
     // 8. Create bubbles
     // I tried using the same method as the bubble diagram but the bubbles have different coordinates so I had to use a dynamic method to create the bubbles and for the coordinates to be placed based sugar and fat.

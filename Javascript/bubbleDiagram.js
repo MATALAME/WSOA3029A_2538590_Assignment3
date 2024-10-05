@@ -69,6 +69,7 @@ function createBubbles(data) {
   // 5. Create Tooltip
   const tooltip = d3.select("#tooltip");
 
+
   Bubbles
       .on("mouseenter", function (event, d) {
           tooltip

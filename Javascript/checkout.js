@@ -42,3 +42,6 @@ document.getElementById("Dropdown").addEventListener("change", function() {
 });
 
 updateItemContainer("berry-Select"); 
+
+//I ran out of time to create a Local Storage for the text fields, but I was intenting on storying that information in a local storage whenever uses fill in their details.
+//I excluded the card fields, because I felt as though since its not an official website, I cannot protect and secure the card details of users. 
