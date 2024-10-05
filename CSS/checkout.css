@@ -77,7 +77,6 @@ h1 {
 #Dropdown:focus {
     outline: none; 
     border-color: #007BFF; 
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
 }
 
 .main-container {
@@ -125,6 +124,11 @@ h1 {
     margin: 5px 0; 
 }
 
+#plan-decription {
+    font-family: "Poppins", sans-serif;
+    text-align: left; 
+    margin-top: 30px; 
+}
 
 .form-group {
     display: flex;
@@ -175,4 +179,76 @@ h1 {
 
 #Purchase:hover {
     background-color: #00b333; 
+}
+
+/* Media Queries */
+@media (max-width: 1024px) { /* For Tablets */
+    #Buttons {
+        padding-left: 50px; 
+    }
+
+    .form-container {
+        padding: 10px; 
+        max-width: 95%; 
+    }
+
+    .main-container {
+        margin-left: 50px; 
+    }
+
+    h1 {
+        padding: 10px 20px; 
+        font-size: 28px; 
+    }
+
+    #pay-Options img {
+        width: 150px; 
+    }
+
+    #Purchase {
+        margin-left: 0;
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 768px) { /* For Phones */
+    header {
+        flex-direction: column;
+        align-items: flex-start; 
+        padding: 10px; 
+    }
+
+    .logo {
+        margin-left: 0; 
+        max-width: 100px; 
+    }
+
+    #Buttons {
+        justify-content: center; 
+        padding-left: 0;
+    }
+
+    .main-container {
+        flex-direction: column; 
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    h1 {
+        padding: 10px; 
+        font-size: 24px; 
+    }
+
+    #pay-Options img {
+        width: 100px; 
+    }
+    
+    #Dropdown {
+        width: 100%; 
+    }
+
+    #Purchase {
+        width: 50%;
+        margin-left: 50px;
+    }
 }

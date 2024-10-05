@@ -36,3 +36,54 @@ h2 {
     max-width: 40%; 
     height: auto;
 }
+
+/*For tablets */
+@media (max-width: 1024px) {
+    body {
+        padding: 0 20px; 
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    .logo {
+        max-width: 100px;
+        margin-left: 20px;
+    }
+
+    h2 {
+        margin-top: 80px;
+        font-size: 28px;
+    }
+
+    #image-container img {
+        max-width: 60%; 
+    }
+}
+
+/* For Phones */
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px; 
+    }
+
+    header {
+        padding: 10px;
+        justify-content: center; 
+    }
+
+    .logo {
+        max-width: 100px;
+        margin-left: 20px;
+    }
+ 
+    h2 {
+        margin-top: 60px;
+        font-size: 24px;
+    }
+
+    #image-container img {
+        max-width: 70%; 
+    }
+}

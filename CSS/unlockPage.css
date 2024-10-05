@@ -138,14 +138,14 @@ header {
     font-weight: 700;
     letter-spacing: 2px;
     max-width: 600px;
-    margin-left: 95px;
+    margin-left: 90px;
 }
 
 .Buy-info h2 {
     font-size: 20px;
     color: #000000;
     letter-spacing: 2px;
-    margin-left: 95px;
+    margin-left: 90px;
 }
 
 .Buy-info p {
@@ -153,7 +153,7 @@ header {
     color: #000000;
     letter-spacing: 2px;
     max-width: 1000px;
-    margin-left: 95px;
+    margin-left: 90px;
 }
 
 .card-container {
@@ -259,7 +259,14 @@ header {
     }
 
     .card {
-        width: 100%;
+        width: 90%;
+        flex: 1 1 90%; 
+        margin: 10px;
+    }
+
+    .logo {
+        max-width: 100px;
+        margin-left: 20px;
     }
 }
 
@@ -269,23 +276,26 @@ header {
     }
 
     .Fruit-info h1, .Buy-info h1 {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .Fruit-info h2, .Buy-info h2, .Benefits h2, .Subscribe h2 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .Fruit-info p, .Buy-info p, .Benefits ol li, .Subscribe p {
         font-size: 12px;
     }
 
-    .card {
-        width: 100%;
+   .card {
+        width: 90%;
+        flex: 1 1 90%; 
+        margin: 10px;
     }
 
     .logo {
         max-width: 100px;
         margin-left: 20px;
     }
+
 }

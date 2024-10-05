@@ -243,6 +243,11 @@ header {
     #CEO h2 {
         font-size: 32px;
     }
+    
+    .logo {
+        max-width: 100px;
+        margin-left: 20px;
+    }
 }
 
 @media (max-width: 768px) { /* For the phone */
@@ -279,4 +284,10 @@ header {
     .sponsor-item img {
         width: 100px; 
     }
+
+    .logo {
+        max-width: 100px;
+        margin-left: 20px;
+    }
 }
+

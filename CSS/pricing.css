@@ -135,6 +135,7 @@ header {
     .Plan-Card {
         flex-direction: column;
         text-align: center;
+        background-color: #ffffff;
     }
 
     .Plan-Card h1 {
@@ -142,36 +143,88 @@ header {
         margin-left: 0;
     }
 
-    .Plan-Card h2, .Plan-Card h3, .Plan-Card p, .Plan-Card ul li {
+    .Plan-Card h2 {
         font-size: 18px;
         margin-left: 0;
     }
 
-    .Plan-Card button {
+    .Plan-Card h3 {
+        font-size: 16px;
         margin-left: 0;
+    }
+
+    .Plan-Card p {
+        font-size: 12px;
+        margin-left: 0;
+    }
+
+    .Plan-Card ul li {
+        font-size: 12px;
+    }
+
+    .Plan-Card button {
+       text-align: center;
+    }
+
+    .back-btn {
+        font-size: 14px; 
+        padding: 4px 12px; 
+        margin-top: 10px;
+    }
+
+    .logo {
+        max-width: 100px;
+        margin-left: 20px;
     }
 }
 
-@media (max-width: 768px) { /* Phone sizes */
+@media (max-width: 768px) { 
     .Plan-Card {
         padding: 10px;
         text-align: center;
+        background-color: #ffffff;
     }
 
     .Plan-Card h1 {
-        font-size: 32px;
+        font-size: 40px;
     }
 
-    .Plan-Card h2, .Plan-Card h3, .Plan-Card p, .Plan-Card ul li {
-        font-size: 14px;
+    .Plan-Card h2 {
+        font-size: 18px;
+    }
+
+    .Plan-Card h3 {
+        font-size: 16px;
+        margin-left: 0;
+    }
+
+    .Plan-Card p {
+        font-size: 12px;
+        margin-left: 0;
+    }
+
+    .Plan-Card ul li{
+        font-size: 12px;
     }
 
     .Plan-Card img {
-        max-width: 100%;
+        max-width: 70%;
     }
 
     .Plan-Card button {
         padding: 8px 30px;
         font-size: 14px;
+        align-items: center;
+    }
+
+    .back-btn {
+        font-size: 12px; 
+        margin-top: 10px;
+        padding: 4px 8px; 
+    }
+
+    .logo {
+        max-width: 100px;
+        margin-left: 20px;
     }
 }

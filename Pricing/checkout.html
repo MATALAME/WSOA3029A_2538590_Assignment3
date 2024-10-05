@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Matalame's website for Interactive Media WSOA3028A">
     <meta name="author" content="Matalame Mamabolo">
     <meta name="keywords" content="Card, Debit, Credit, Pay, Visa, Pay Pal">
@@ -37,6 +39,7 @@
 
     <div id="Buttons">
         <select id="Dropdown">
+            <option value="none-Select">None Selected</option>
             <option value="citrus-Select">Citrus Subscription Plan</option>
             <option value="tropical-Select">Tropical Subscription Plan</option>
             <option value="berry-Select">Berry Subscription Plan</option>
@@ -79,14 +82,16 @@
     
         <section id="item-container">
             <div class="item-flex-container"> 
-                <img id="plan-image" src="../Images/berryCheckout.jpg" alt="Berry Plan">
+                <img id="plan-image" src="" alt="">
                 <div class="item-details"> 
-                    <p id="plan-name">Berry Plan (Elite Plan)</p>
-                    <p id="plan-price">Price: R220/pm</p>
+                    <h2 id="plan-name"></h2>
+                    <p id="plan-price"></p>
                 </div>
             </div>
+            <p id="plan-decription"></p>
         </section>
     </div>
+
 
     <a href="./purchase.html"><button id = "Purchase"> SUBSCRIBE</button></a>      
 
