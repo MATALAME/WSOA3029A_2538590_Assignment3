@@ -153,7 +153,7 @@ header {
 
 /* Media Queries */
 
-/* For screens smaller than 992px */
+
 @media (max-width: 992px) {
     .Essay {
         padding: 0px 100px;
@@ -189,7 +189,6 @@ header {
     
 }
 
-/* For screens smaller than 768px */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
