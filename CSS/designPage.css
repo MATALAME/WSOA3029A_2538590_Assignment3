@@ -219,6 +219,49 @@ header {
     padding-bottom: 10px;
 }
 
+#information-Structure img {
+    display: block;  /* This sets the image to "block" to allow the margin auto centering */
+    max-width: 50%;       
+    margin: 0 auto; 
+}
+
+#information-Structure ul li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+    max-width: 1000px;
+    padding-top: 0px;
+    margin-bottom: 40px;
+}
+
+#userFlow {
+    padding: 0px 200px;
+}
+
+#userFlow h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    color: #000000;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+}
+
+#userFlow img {
+    display: block;  /* This sets the image to "block" to allow the margin auto centering */
+    max-width: 50%;       
+    margin: 0 auto; 
+}
+
+#userFlow p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+    max-width: 1000px;
+    padding-top: 0px;
+    margin-bottom: 40px;
+}
+
 .BacktoTop{
     display: flex;
     justify-content: center; 
