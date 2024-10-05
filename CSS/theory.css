@@ -129,9 +129,6 @@ header {
     color: #fff; 
 }
 
-.Essay{
-    text-align: center;
-}
 #Essay-btn {
     background-color: #3b6021;
     color: white;
@@ -143,6 +140,9 @@ header {
     font-size: 16px;
 }
 
+.EssayBtn{
+    text-align: center;
+}
 #Essay-btn a {
     color: #ffffff;
 }
