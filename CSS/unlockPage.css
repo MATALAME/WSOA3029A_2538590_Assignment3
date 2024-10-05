@@ -244,6 +244,7 @@ header {
 @media (max-width: 1024px) { /* For the tablet */
     .Fruit-info, .Benefits, .Subscribe, .Buy-info {
         padding: 20px;
+        margin-top: 5px;
     }
 
     .Fruit-info h1, .Buy-info h1 {
@@ -273,6 +274,7 @@ header {
 @media (max-width: 768px) { /* For mobile view */
     .Fruit-info, .Benefits, .Subscribe, .Buy-info {
         padding: 10px;
+        margin-top: 5px;
     }
 
     .Fruit-info h1, .Buy-info h1 {

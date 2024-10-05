@@ -86,6 +86,34 @@ header {
     margin-bottom: 50px;
 }
 
+.Home{
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
+    padding-bottom: 40px;
+    margin-top: 100px;
+}
+
+#home-btn {
+    background-color: #3b6021;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+#home-btn a{
+    color: #ffffff;
+}
+
+#home-btn:hover {
+    background-color: #00b333;
+}
+
+
 .btn a {
     background-color: #3b6021; 
     color: white;                         
@@ -110,6 +138,7 @@ header {
 
     .Essay h1 {
         font-size: 30px;
+        margin-top: 5px;
     }
 
     .Essay h2 {
@@ -133,6 +162,8 @@ header {
         font-size: 14px;
         padding: 8px 16px;
     }
+
+    
 }
 
 /* For screens smaller than 768px */
@@ -148,6 +179,7 @@ header {
 
     .Essay h1 {
         font-size: 28px;
+        margin-top: 5px;
     }
 
     .Essay h2 {
