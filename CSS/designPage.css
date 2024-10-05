@@ -44,6 +44,7 @@ header {
     margin-left: 0px;
     padding-top: 0;
     padding-bottom: 50px;
+    border: 1px solid #000000;
 }
 
 #Wireframes {
@@ -68,27 +69,25 @@ header {
     padding-bottom: 20px;
 }
 
+.content {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+#Wireframes img {
+    max-width: 45%; 
+    margin: 0 10px;
+    border: 1px solid #000000;
+}
+
+.phone-img {
+    max-height: 330px; 
+    width: auto; 
+}
+
 .wireframe-item {
     margin-bottom: 40px;
-}
-
-.content {
-    display: flex;
-    align-items: flex-start; /* This align items at the top */
-    justify-content: space-between; /* This creates space between the text and image */
-}
-
-.content p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #000000;
-    max-width: 50%; 
-    margin-right: 20px; 
-}
-
-.content img {
-    max-width: 47%; 
-    height: auto;
 }
 
 #fonts{
@@ -267,6 +266,7 @@ header {
     justify-content: center; 
     align-items: center;  
     padding-bottom: 40px;
+    margin-top: 100px;
 }
 
 #TopBtn {
@@ -283,6 +283,31 @@ header {
 #TopBtn:hover {
     background-color: #00b333;
 }
+
+.Essay{
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
+    padding-bottom: 40px;
+    margin-top: 100px;
+}
+
+#Essay-btn {
+    background-color: #3b6021;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+#Essay-btn:hover {
+    background-color: #00b333;
+}
+
+
 
 
 

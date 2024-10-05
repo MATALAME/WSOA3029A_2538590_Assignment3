@@ -72,9 +72,10 @@
 
     <section id = "code"> 
         <h2> Code</h2>
-        <p> For some of the functions and styling on the website, I reused code from a previous assignment to manage my time. There were crucial elements, such as the navigation bar, 
-            that I wanted to reuse. I also added new features, like a slight resize effect when hovering over certain cards, dynamically added buttons, and a background color change when 
-            hovering over a button. </p>
+        <p> For some of the functions and styling on the website, I reused code from a previous assignment to help manage my time. There were crucial elements, such as the navigation bar, 
+            that I used. I also added new features, like a slight resize effect when hovering over certain cards, dynamically added buttons, dynamically added images and a background color change when 
+            hovering over a button. I did come across some problems with implementing some of my code so I looked through the MDN documentation, Stack Overflow, ChatGPT and other websites to help me figure 
+            out the problems I was facing. </p>
     </section>
 
     <section id = "challenges"> 
@@ -83,6 +84,11 @@
             documentation. This made the selection process more time-consuming. Another issue was with the navigation bar. I reused code from a previous project, but the script failed 
             to work because the file path was too long, it was buried within multiple folders, causing the ‘root’ directory issue. Additionally, working with D3.js presented some difficulties. 
             Although the syntax was a bit complex to grasp initially, the examples we covered in class made it easier to implement certain features.</p>
+        <p> When I began the process of making the data visualization, I had issues with Fetching the data from the API, I kept getting the CORS error that didn't allow me to the fetch data. I tried
+            getting assistance by AI and it provided me with a temporary proxy, which allowed me to bypass the error but only temporarily. I knew that the this way would not work as it would not be 
+            visible on GitHub. After seeking assistance from the lecturer, I was advised to install the Chrome Extension called "Allow CORS: Access-Control-Allow-Origin" on the Chrome Web Store. This 
+            extension removed the CORS error which helped me make progress with my data visualizations.
+        </p>
     </section>
 
     <section id = "information-Structure">
@@ -115,16 +121,24 @@
         <h2> User FLow </h2>
         <img src = "../Images/UserFlow.png" alt = "Image of User Flow">
 
-        <section>
-            <h3> User's Goals(The Main actions or goals users might have on the site)</h3>
+        
+        <h3> User's Goals(The Main actions or goals users might have on the site)</h3>
             <ul>
-                <li> </li>
+                <li> Flow 1(Learn about the benefits of fruits): the user will go through the website reading the advantages and affordances for including fruits in their diet. </li>
+                <li> Flow 2(View plans and subscribe to a diet plan): the user is able to select their prefered plan and also read through its information, the user will also reach the checkout page for payment.</li>
+                <li> Flow 3(View the design process of the website): the user will be able to see the design choices and processes that were present in making the website, there are also able to read the Assignmen 2 essay.</li>
+                <li> Flow 4(View and engage with data visualizations): the user here is able to interact with the data visualization.</li>
             </ul>
-        </section>
+
     </div>
 
     <div class="BacktoTop">
         <button id="TopBtn">Back To Top</button>
+    </div>
+
+    <div class="Essay">
+        <button id="Essay-btn"><a href="./Essay.html">></a>
+        </button>
     </div>
 
     <script src = "../Javascript/wireframes.js"></script>  
