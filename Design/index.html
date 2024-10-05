@@ -27,6 +27,8 @@
         </nav>
     </header>
 
+    <h1> Design Process</h1>
+
     <section id = "Style-guide">
         <h2> Style Guide</h2>
         <img src = "../Images/StyleGuide.jpg">
@@ -36,7 +38,6 @@
         <h2>Wireframes</h2>
         <div id="wireframe-list"></div>
     </section>
-    
 
     <section id = "fonts">
         <h2> Fonts</h2>
@@ -47,72 +48,28 @@
             benefits or subscription plans to bring to attention to important information.</p>
     </section>
 
-    <section id = "Reflection">
-        <h2> Reflection</h2>
-        <p> I searched for many different APIs to use for my website and spent hours trying to understand what live APIs meant. I initially assumed that 'live' meant 
-            APIs that updated daily, which led me to find fewer free online APIs, as many were restricted and only allowed limited data access. The lecturer clarified 
-            what was meant by 'live' APIs and I eventually found a GitHub repository with a list of public APIs, where I discovered the one I wanted to use in the food 
-            section, specifically focused on fruits. </p>
-        <p> The API includes properties and characteristics of fruits, such as fat, protein, sugar, and more. I decided to create a fruit subscription website that 
-            combines health with convenience. Drawing inspiration from the data-driven insights of the API, I aimed to build a platform that educates and also encourages 
-            healthy living through fruit consumption. I realized I could tell a compelling story about the health benefits of different fruit groups. 
-            My goal is to offer a seamless and enjoyable experience where users can access valuable information and engage with content, such as recipes, fitness 
-            tips, and coaching making healthy choices simple, and accessible.</p>
-    </section>
-
-    <section id = "Resources"> 
-        <h2> Resources</h2>
-        <p> To achieve the clean, modern aesthetic I envisioned for the website, I spent time browsing royalty-free image websites, specifically searching for high quality 
-            fruit images. Most of the images I selected were sourced from the Freepik website, which offered multiple collections of images that aligned with my design goals. 
-            To further refine the look and ensure consistency with my branding, I edited the chosen images in Photoshop. Adjusting colours, enhancing details, and 
-            overlaying custom text. For example, on the "UNLOCK" page, I added the headline "Explore the Health Benefits of Fruits!" to create a visually striking yet 
-            informative element that invites users to dive deeper into the content. These edits helped to improve the overall presentation, ensuring the imagery was both engaging and 
-            aligned with the website’s goal of promoting healthy living through fruit consumption. </p>
-    </section>
-
-    <section id = "code"> 
-        <h2> Code</h2>
-        <p> For some of the functions and styling on the website, I reused code from a previous assignment to help manage my time. There were crucial elements, such as the navigation bar, 
-            that I used. I also added new features, like a slight resize effect when hovering over certain cards, dynamically added buttons, dynamically added images and a background color change when 
-            hovering over a button. I did come across some problems with implementing some of my code so I looked through the MDN documentation, Stack Overflow, ChatGPT and other websites to help me figure 
-            out the problems I was facing. </p>
-    </section>
-
-    <section id = "challenges"> 
-        <h2> Challenges</h2>
-        <p> The first challenge I faced was finding a suitable API. I had to look through numerous APIs, each with different pricing, and many of them lacked clear and straightforward 
-            documentation. This made the selection process more time-consuming. Another issue was with the navigation bar. I reused code from a previous project, but the script failed 
-            to work because the file path was too long, it was buried within multiple folders, causing the ‘root’ directory issue. Additionally, working with D3.js presented some difficulties. 
-            Although the syntax was a bit complex to grasp initially, the examples we covered in class made it easier to implement certain features.</p>
-        <p> When I began the process of making the data visualization, I had issues with Fetching the data from the API, I kept getting the CORS error that didn't allow me to the fetch data. I tried
-            getting assistance by AI and it provided me with a temporary proxy, which allowed me to bypass the error but only temporarily. I knew that the this way would not work as it would not be 
-            visible on GitHub. After seeking assistance from the lecturer, I was advised to install the Chrome Extension called "Allow CORS: Access-Control-Allow-Origin" on the Chrome Web Store. This 
-            extension removed the CORS error which helped me make progress with my data visualizations.
-        </p>
-    </section>
-
     <section id = "information-Structure">
         <h2> Information Structure </h2>
         <img src = "../Images/InformationStructure.png" alt = "Image of Information Structure">
         <ul>
             <li> Home page: On the home page the user has the ability to use the navigation menu to naviagte through the website and to other pages. The user is
-            prsented with a headline and intoduction. As they continue scrolling down they are presented with a quote by the CEO, to create a sense of friendliness 
-            and approachability to the website. Further down, there are the objectives and goals of the business to give users an idea of what the business is all about
-            and what it stands for. Lastly, there is a section for users to see the partners involved in the business, to give it more credibility.  </li>
-            <li> Unlock page: On the unlock page, the user has access to the navigation menu. They are presented with information about fruits and their advantages, 
-            the user is also presented with a list of 10 benefits from including fruits in their diet. Lastly, there is a "Call- To-Action" button that prompts the user
+            presented with a headline and intoduction. As they continue scrolling down they are presented with a quote by the CEO, to create a sense of friendliness 
+            and approachability to the website. Further down, are the objectives and goals of the business to give users an idea of what the business is all about
+            and what it stands for. Lastly, there is a section for users to see the partners involved in the business, giving the business/ website more credibility.  </li>
+            <li> Unlock page: On the unlock page, the user has access to the navigation menu. They are presented with information about fruits and their advantages. The 
+            user is also presented with a list of 10 benefits for including fruits in their diet. Lastly, there is a "Call- To-Action" button that prompts the user
             to view the diet plans the business offers. 
             </li>
             <li> Pricing page: On the pricing page, the user also has access to the navigation menu. The user is presented with three diet plan options, where they can select their desired
             diet plan to view more information about it. As they press the respective diet plan button they will be redirected to the respective diet plan page where they'll see what the plan
-            includes, the price and other additionals. From there the user is able to proceed to payment through buttons.
+            includes, the price and other additionals. From there the user is able to proceed to payment by pressing the neccessary buttons.
             </li>
             <li> Design page: On the design page, the user still has access to the navigation menu. The user is presented with the design choices and decisons of the website's content, aesethic
             and other design elements. The user can see the wireframes, style guide, user flow and more. The user is also presented with an essay button that will redirect them to the essays page 
             where they can view and read the essay. 
             </li>
-            <li> Explore page: On the explore page, the user still has access to the navigation menu, The user is presented with two interact data visualizations namely: a bubble diagram and a scatterplot
-            the user will be able to interact with the data visualizations through tooltips, legends, buttons and dropdown menus. The user will see data centered around fruits and their benefits. 
+            <li> Explore page: On the explore page, the user still has access to the navigation menu. The user is presented with two interactive data visualizations namely: a bubble diagram and a scatterplot.
+            They can engage with these visualizations using tooltips, legends, buttons and dropdown menus, exploring data centered around fruits and their benefits. 
             </li>
         </ul>
     </section>
@@ -130,40 +87,18 @@
                 <li> Flow 4(View and engage with data visualizations): the user here is able to interact with the data visualization.</li>
             </ul>
     </div>
-
-    <section id = "Bubble-diagram">
-        <h2> Data Visualization 1: Bubble Diagram</h2>
-        <p> The API I used for this assignment is from FruityVice.com, which provides data about fruits, categorized into family, order, genus, calories, fat, sugar, carbohydrates, and protein. Each data category has varying values.</p>
-        <p> For the first data visualization, I chose to create a bubble diagram. My goal was to help users determine which fruits to consume for their desired weight goals, whether for weight gain or weight loss, by focusing on the categories 
-            of calories and protein. I wanted the visualization to highlight the versatility of fruits and how they can be used for both types of goals.</p>
-        <p> The diagram allows users to separate the fruits into two categories. A tooltip feature displays the values and names associated with each bubble, helping users view and understand the data at their convenience. Another interactive element 
-            I added is a dropdown menu, which enables users to filter fruits by family, giving them insight into which fruit families are most effective and popular within the selected categories. The colors in the diagram are based on calorie values: 
-            the lightest shades represent the lowest calories, and the color darkens as the calorie count increases.</p>
-
-        <img src = "../Images/MyBubbleDiagram.png" alt = "Fruit.Co Bubble Diagram"> 
-
-        <p> The reason I chose this data visualization is that a bubble diagram was ideal for comparing fruits visually by using separation, well in this case the D3 force element. It allows the data to be presented in a visually appealing and intuitive way. 
-            It also enabled me to handle the large dataset effectively by representing different dimensions through bubble size, color, and position, providing a clear overview of complex information. The interactive elements, such as tooltips and dropdown menus, 
-            enhanced user engagement and allowed for deeper exploration of the data. Unlike bar or pie charts, a bubble diagram visually represents ranges of values, making it easier to compare data across different fruits.</p>
-        <p> Overall, this data visualization helps users explore and understand the nutritional content of different fruits, particularly in the context of weight management.</p>
-
-    </section>
-
+    
     <div class="BacktoTop">
         <button id="TopBtn">Back To Top</button>
     </div>
 
     <div class="Essay">
-        <button id="Essay-btn"><a href="./Essay.html">Essay ></a>
-        </button>
+        <button id="Essay-btn"><a href="./Essay.html">Essay ></a></button>
+        <button id="Essay-btn"><a href="./process.html">Part 2 ></a></button>
     </div>
 
     <script src = "../Javascript/wireframes.js"></script>  
     <script src = "../Javascript/backTotop.js"></script>
-    
-    <footer id="footerItem"></footer>
-    </footer>
 
-    <script src = "../Javascript/footer.js"></script>
 </body>
 </html>

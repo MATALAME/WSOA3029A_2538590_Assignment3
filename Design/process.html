@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="Matalame's website for Interactive Media WSOA3028A">
+    <meta name="author" content="Matalame Mamabolo">
+    <meta name="keywords" content="Design, Fonts, Style Guide, Images, Information">
+    <meta property="og:title" content="Design Homepage">
+    <meta property="og:description" content="A commercial website aimed at helping you eat healthier by including fruits into your meals, its a much healthier option. ">
+    <meta property="og:type" content="Commercial Website">
+    <title>Design</title>
+</head>
+
+    <script type="module">
+        import { initialise } from "../Javascript/navMenu.js";
+        initialise("Design");
+    </script> 
+
+    <link rel = "stylesheet" href = "../CSS/designPage.css">
+    <link rel = "stylesheet" href = "../CSS/navBar.css">
+    <link rel = "stylesheet" href = "../CSS/footer.css">
+
+<body>
+    <header>
+        <img class = "logo" src = "../Images/Logo1.png" alt = "logo">
+        <nav> 
+
+        </nav>
+    </header>
+
+    <section id = "Reflection">
+        <h1> Part 2</h1>
+        <h2> Reflection</h2>
+        <p> I searched for many different APIs to use for my website and spent hours trying to understand what live APIs meant. I initially assumed that 'live' meant 
+            APIs that updated daily, which led me to find fewer free online APIs, as many were restricted and only allowed limited data access. The lecturer clarified 
+            what was meant by 'live' APIs and I eventually found a GitHub repository with a list of public APIs, where I discovered the one I wanted to use in the food 
+            section, specifically focused on fruits. </p>
+        <p> The API includes properties and characteristics of fruits, such as fat, protein, sugar, and more. I decided to create a fruit subscription website that 
+            combines health with convenience. Drawing inspiration from the data-driven insights of the API, I aimed to build a platform that educates and also encourages 
+            healthy living through fruit consumption. I realized I could tell a compelling story about the health benefits of different fruit groups. 
+            My goal is to offer a seamless and enjoyable experience where users can access valuable information and engage with content, such as recipes, fitness 
+            tips, and coaching making healthy choices simple, and accessible.</p>
+    </section>
+
+    <section id = "Resources"> 
+        <h2> Resources</h2>
+        <p> To achieve the clean, modern aesthetic I envisioned for the website, I spent time browsing royalty-free image websites, specifically searching for high quality 
+            fruit images. Most of the images I selected were sourced from the Freepik website, which offered multiple collections of images that aligned with my design goals. 
+            To further refine the look and ensure consistency with my branding, I edited the chosen images with Photoshop. Adjusting colours, enhancing details, and 
+            overlaying custom text. For example, on the "UNLOCK" page, I added the headline "Explore the Health Benefits of Fruits!" to create a visually striking yet 
+            informative element that invites users to dive deeper into the content. These edits helped to improve the overall presentation, ensuring the imagery was both engaging and 
+            aligned with the website’s goal of promoting healthy living through fruit consumption. </p>
+    </section>
+
+    <section id = "code"> 
+        <h2> Code</h2>
+        <p> For some of the functions and styling on the website, there were crucial elements, such as the navigation bar, that I used. I also added new features, like a slight resize effect when hovering 
+            over certain cards, dynamically added buttons, dynamically added images, and a background color change when hovering over a button. I encountered some problems with implementing my code, so 
+            I looked through the MDN documentation, Stack Overflow, ChatGPT, and other websites to help me figure out the issues I was facing. </p>
+    </section>
+
+    <section id = "challenges"> 
+        <h2> Challenges</h2>
+        <p> The first challenge I faced was finding a suitable API. I had to look through numerous APIs, each with different pricing. Many of which lacked clear and straightforward 
+            documentation. This made the selection process more time-consuming. Another issue was with the navigation bar. I reused code from a previous project, but the script failed 
+            to work because the file path was too long, it was buried within multiple folders, causing the ‘root’ directory issue. Additionally, working with D3.js presented some difficulties. 
+            Although the syntax was a bit complex to grasp initially, the examples we covered in class made it easier to implement certain features.</p>
+        <p> When I began the process of making the data visualization, I had issues with Fetching the data from the API, I kept getting the CORS error that didn't allow me to the fetch data. I tried
+            getting assistance from AI and it provided me with a temporary proxy, which allowed me to bypass the error but only temporarily. I knew this way would not work as it would not be 
+            visible on GitHub. After seeking assistance from the lecturer, I was advised to install the Chrome Extension called "Allow CORS: Access-Control-Allow-Origin" on the Chrome Web Store. This 
+            extension removed the CORS error which helped me make progress with my data visualizations.
+        </p>
+    </section>
+
+    <section id = "Bubble-diagram">
+        <h2> Data Visualization 1: Bubble Diagram</h2>
+        <p> The API I used for this assignment is from FruityVice.com, which provides data about fruits, categorized into family, order, genus, calories, fat, sugar, carbohydrates, and protein. Each data category has varying values.</p>
+        <p> For the first data visualization, I chose to create a bubble diagram. My goal was to help users determine which fruits to consume for their desired weight goals, whether for weight gain or weight loss, by focusing on the categories 
+            of calories and protein. I wanted the visualization to highlight the versatility of fruits and how they can be used for both types of goals.</p>
+        <p> The diagram allows users to separate the fruits into two categories. A tooltip feature displays the values and names associated with each bubble, helping users view and understand the data at their convenience. Another interactive element 
+            I added is a dropdown menu, which enables users to filter fruits by family, giving them insight into which fruit families are most effective and popular within the selected categories. The colors in the diagram are based on calorie values: 
+            the lightest shades represent the lowest calories, and the color darkens as the calorie count increases.</p>
+
+        <img src = "../Images/MyBubbleDiagram.png" alt = "Fruit.Co Bubble Diagram"> 
+
+        <p> The reason I chose this data visualization is that a bubble diagram was ideal for comparing fruits visually by using separation, well in this case the D3 force element. It allows the data to be presented in a visually appealing and intuitive way. 
+            It also enabled me to handle the large dataset effectively by representing different dimensions through bubble size, color, and position, providing a clear overview of complex information. The interactive elements, such as tooltips and dropdown menus, 
+            enhanced user engagement and allowed for deeper exploration of the data. Unlike bar or pie charts, a bubble diagram visually represents ranges of values, making it easier to compare data across different fruits.</p>
+        <p> Overall, this data visualization helps users explore and understand the nutritional content of different fruits, particularly in the context of weight management.</p>
+    </section>
+
+    <section id = "scatter-Plot">
+        <h2> Data Visualization 1: Bubble Diagram</h2>
+        <p> The API had multiple categories I could use, and I wanted to highlight a new aspect of that data. I decided to use a scatter plot to represent it. Fruits contain sugar, which provides energy to our bodies, and carbohydrates also contribute to energy. 
+            I needed a way to present these two datasets together, so I used a scatter plot, placing carbohydrates on the y-axis and sugar on the x-axis. The bubbles were positioned based on their values for carbohydrates and sugar, helping users determine which 
+            fruits provide the most energy and which provide the least.</p>
+        <p> For interactivity, I included a tooltip that displays the fruit's name along with its carbohydrate and sugar values. Additionally, I added filter buttons that allow users to view fruits with high or low sugar and high or low carbohydrates.</p>
+
+        <img src = "../Images/MyScatterPlot.png" alt = "Fruit.Co Scatter Plot"> 
+
+        <p> Although I wanted to add animations to make the scatter plot more visually appealing, I ran out of time. The colors in this visualization are determined by the sugar levels of the fruits. In hindsight, I think I could have improved the visualization by 
+            adding grid lines to help users more clearly see the exact values represented by the bubbles on the graph.</p>
+    </section>
+
+
+    <div class="BacktoTop">
+        <button id="TopBtn">Back To Top</button>
+    </div>
+
+    <div class="Essay">
+        <button id="Essay-btn"><a href="./index.html">&lt; Part 1</a></button>
+        <button id="Essay-btn"><a href="./Essay.html">Essay ></a></button>
+    </div>
+
+    <script src = "../Javascript/wireframes.js"></script>  
+    <script src = "../Javascript/backTotop.js"></script>
+    
+    <footer id="footerItem"></footer>
+    </footer>
+
+    <script src = "../Javascript/footer.js"></script>
+</body>
+</html>

@@ -35,9 +35,10 @@ header {
 }
 
 .Essay h1 {
-    font-size: 35px;
+    font-size: 40px;
     padding-top: 50px;
     padding-bottom: 10px;
+    text-align: center;
 }
 
 .Essay h2 {
@@ -126,6 +127,28 @@ header {
 }
 .btn:hover a {
     color: #fff; 
+}
+
+.Essay{
+    text-align: center;
+}
+#Essay-btn {
+    background-color: #3b6021;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+#Essay-btn a {
+    color: #ffffff;
+}
+
+#Essay-btn:hover {
+    background-color: #00b333;
 }
 
 /* Media Queries */
