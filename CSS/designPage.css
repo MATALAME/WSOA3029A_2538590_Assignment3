@@ -4,7 +4,7 @@ body {
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-color: #EFF0ED;
 }
 
 /* Header Styles */
@@ -13,7 +13,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #fff;
+    background-color: #EFF0ED;
 }
 
 .logo {
@@ -34,6 +34,7 @@ h1 {
     letter-spacing: 2px;
     padding-bottom: 10px;
     text-align: center;
+    padding-top: 50px;
 }
 
 h2 {
@@ -50,7 +51,6 @@ p, li {
     line-height: 1.6;
     color: #000000;
     max-width: 1000px;
-    margin-bottom: 40px;
 }
 
 section img {
@@ -99,7 +99,18 @@ section img {
     margin-bottom: 40px;
 }
 
-button, #TopBtn, #Essay-btn {
+button, #TopBtn {
+    background-color: #3b6021;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+#Essay-btn {
     background-color: #3b6021;
     color: white;
     border: none;
@@ -111,14 +122,22 @@ button, #TopBtn, #Essay-btn {
 }
 
 #Essay-btn a {
-    color: #ffffff;
+    color: #EFF0ED;
 }
 
 button:hover, #TopBtn:hover, #Essay-btn:hover {
     background-color: #00b333;
 }
 
-.content, .BacktoTop, .Essay {
+.Essay{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    padding-bottom: 40px;
+    margin-top: 20px;
+}
+
+.BacktoTop {
     display: flex;
     justify-content: center;
     align-items: center;  

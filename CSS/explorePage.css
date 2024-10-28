@@ -5,7 +5,7 @@ body {
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-color: #EFF0ED;
 }
 
 header {
@@ -13,7 +13,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #fff;
+    background-color: #EFF0ED;
 }
 
 .logo {
@@ -25,7 +25,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 150px;
-    background-color: #fff;
+    background-color: #EFF0ED;
 }
 
 #Data-Viz h1 {
@@ -69,7 +69,7 @@ header {
     cursor: pointer;           
     font-size: 14px;           
     background-color: #3b6021; 
-    color: #fff;               
+    color: #EFF0ED;               
     transition: background-color 0.3s ease; 
 }
 
@@ -85,7 +85,7 @@ header {
     cursor: pointer;           
     font-size: 14px;           
     background-color: #3b6021; 
-    color: #fff;               
+    color: #EFF0ED;               
 }
 
 #combine:hover, #split:hover {
@@ -96,7 +96,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 150px;
-    background-color: #fff;
+    background-color: #EFF0ED;
 }
 
 #Data-Viz2 h2{
@@ -141,7 +141,7 @@ header {
     cursor: pointer;           
     font-size: 14px;           
     background-color: #3b6021; 
-    color: #fff;               
+    color: #EFF0ED;               
 }
 
 #all:hover{
@@ -156,7 +156,7 @@ header {
     cursor: pointer;           
     font-size: 14px;           
     background-color: #3b6021; 
-    color: #fff;               
+    color: #EFF0ED;               
 }
 
 #low-sugar:hover{
@@ -171,7 +171,7 @@ header {
     cursor: pointer;           
     font-size: 14px;           
     background-color: #3b6021; 
-    color: #fff;               
+    color: #EFF0ED;               
 }
 
 #high-sugar:hover{
@@ -186,7 +186,7 @@ header {
     cursor: pointer;           
     font-size: 14px;           
     background-color: #3b6021; 
-    color: #fff;               
+    color: #EFF0ED;               
 }
 
 #low-carb:hover{
@@ -201,7 +201,7 @@ header {
     cursor: pointer;           
     font-size: 14px;           
     background-color: #3b6021; 
-    color: #fff;               
+    color: #EFF0ED;               
 }
 
 #high-carb:hover{

@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap'); 
 
-
 body {
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-color: #EFF0ED;
 }
 
 /* Header Styles */
@@ -14,7 +13,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #fff;
+    background-color: #EFF0ED;
 }
 
 .logo {
@@ -26,7 +25,6 @@ h1 {
     justify-content: space-between;
     align-items: center;
     padding: 10px 150px;
-    background-color: #fff;
     font-size: 35px;
     color: #000000;
     font-weight: 700;
@@ -166,7 +164,7 @@ h1 {
 #Purchase{
     justify-content: space-between;
     background-color: #3b6021; 
-    color: white;              
+    color: #EFF0ED;              
     border: none;              
     padding: 10px 20px;       
     font-size: 16px;          

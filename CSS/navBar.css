@@ -20,7 +20,11 @@ header {
     display: flex;
     justify-content: center; 
     align-items: center;
-    position: relative; 
+    position: sticky; /* In the assignment feedback I was told to include a sticky nav bar. This helps the user experience as users still have access to the navigation even as they scroll through 
+    the content */
+    top: 0; 
+    z-index: 1000; /* Ensure it's on top */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .logo {

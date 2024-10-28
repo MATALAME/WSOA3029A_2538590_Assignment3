@@ -5,7 +5,7 @@ body {
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-color: #EFF0ED;
 }
 
 /* Header Styles */
@@ -14,7 +14,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #fff;
+    background-color: #EFF0ED;
 }
 
 .logo {
@@ -25,27 +25,30 @@ header {
 .Essay {
     text-align: left;
     padding: 0px 200px;
-    background-color: #fff;
+    background-color: #EFF0ED;
 }
 
-.Essay h1, .Essay h2, .Essay h3 {
+.Essay h2, .Essay h3 {
     font-weight: 700;
     letter-spacing: 2px;
     color: #000000;
 }
 
-.Essay h1 {
+h1 {
     font-size: 40px;
     padding-top: 50px;
     padding-bottom: 10px;
     text-align: center;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #000000;
 }
 
 .Essay h2 {
     font-size: 30px;
     padding-bottom: 20px;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .Essay h3 {
@@ -101,13 +104,13 @@ header {
     padding: 10px 20px;
     margin: 5px;
     cursor: pointer;
-    color: #ffffff;
+    color: #EFF0ED;
     border-radius: 20px;
     font-size: 16px;
 }
 
 #home-btn a{
-    color: #ffffff;
+    color: #EFF0ED;
 }
 
 #home-btn:hover {
@@ -126,7 +129,7 @@ header {
     text-align: center; 
 }
 .btn:hover a {
-    color: #fff; 
+    color: #EFF0ED; 
 }
 
 #Essay-btn {
@@ -143,12 +146,36 @@ header {
 .EssayBtn{
     text-align: center;
 }
+
 #Essay-btn a {
-    color: #ffffff;
+    color: #EFF0ED;
 }
 
 #Essay-btn:hover {
     background-color: #00b333;
+}
+
+#TopBtn {
+    background-color: #3b6021;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+#TopBtn:hover {
+    background-color: #00b333;
+}
+
+.BacktoTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    padding-bottom: 40px;
+    margin-top: 100px;
 }
 
 /* Media Queries */

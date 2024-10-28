@@ -5,7 +5,7 @@ body {
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-color: #EFF0ED;
     overflow: hidden;  /*This makes the page non-scrollable, I did this because this is the end point in the website and there isn't anything the user can see.*/
 }
 
@@ -14,7 +14,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #fff;
+    background-color: #EFF0ED;
 }
 
 .logo {
