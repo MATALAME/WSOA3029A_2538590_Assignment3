@@ -134,4 +134,25 @@ document.getElementById("purchase").addEventListener("click", function (event) {
         // alert("Subscription successful!");
         window.location.href = "./purchase.html";  // Allows redirect to purchase page
     }
+
+    const message = document.getElementById("message");
+    const characterCount = document.getElementById("character-count");
+
+    function updateCharacterCount() {
+        const currentLength = message.value.length; // Get the current length of the input
+        const remainingChars = 50 - currentLength; // Calculate remaining characters
+
+        characterCount.innerText = `${remainingChars} characters remaining`;
+
+        // This prevents users from being able type if the character limit is reached
+    if (currentLength >= 50) {
+        message.value = message.value.substring(0, 50); 
+    }
+}
+
+    // Event listener for input changes on the message field
+    message.addEventListener("input", updateCharacterCount);
+
+    updateCharacterCount();
+
 });

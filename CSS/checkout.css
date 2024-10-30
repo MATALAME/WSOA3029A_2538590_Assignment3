@@ -46,7 +46,7 @@ h1 {
 }
 
 #pay-Options img {
-    width: 200px;
+    width: 150px;
     height: auto;
 }
 
@@ -180,6 +180,11 @@ h1 {
     background-color: #00b333; 
 }
 
+#message {
+    height: 150px;
+    font-size: 14px;    
+}
+
 small {
     color: red;        
     font-size: 14px; 
@@ -213,6 +218,12 @@ small {
     #Purchase {
         margin-left: 0;
         margin-left: 50px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    #character-count{
+        color: #000000;
     }
 }
 
@@ -256,5 +267,7 @@ small {
     #Purchase {
         width: 50%;
         margin-left: 50px;
+        text-align: center;
+        justify-content: center;
     }
 }
