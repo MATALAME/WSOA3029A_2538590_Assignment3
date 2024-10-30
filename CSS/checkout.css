@@ -22,15 +22,16 @@ header {
 } 
 
 h1 {    
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 10px 150px;
+    /* padding: 10px 150px; */
+    text-align: center;
     font-size: 35px;
     color: #000000;
     font-weight: 700;
     letter-spacing: 2px;
-    max-width: 600px;
-    padding-top: 50px;
+    /* max-width: 600px; */
+    padding-top: 30px;
     padding-bottom: 10px;
 }
 
@@ -161,7 +162,7 @@ h1 {
     width: 48%; 
 }
 
-#Purchase{
+#purchase{
     justify-content: space-between;
     background-color: #3b6021; 
     color: #EFF0ED;              
@@ -175,8 +176,13 @@ h1 {
     margin-bottom: 300px;
 }
 
-#Purchase:hover {
+#purchase:hover {
     background-color: #00b333; 
+}
+
+small {
+    color: red;        
+    font-size: 14px; 
 }
 
 /* Media Queries */

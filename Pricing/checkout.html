@@ -30,7 +30,7 @@
     </header>
     
     <main> 
-    <h1> FRUITS.CO</h1>
+    <h1> Checkout</h1>
 
     <div id = "pay-Options">
         <img src = "../Images/Visa.png" alt = "VISA Logo">
@@ -52,39 +52,39 @@
             <div class="row-container">
                 <div class="form-group">
                     <p>Name</p>
-                    <input type="text">
+                    <input type="text" id="name" placeholder="Enter Name">
+                    <small id="name-error"></small>
                 </div>
                 <div class="form-group">
                     <p>Last Name</p>
-                    <input type="text">
+                    <input type="text" id="surname-name" placeholder="Enter Surname">
+                    <small id="surname-error"></small>
                 </div>
             </div>
     
             <div class="form-group">
                 <p>Email</p>
-                <input type="text">
+                <input type="text" id="email" placeholder="Enter Email">
+                <small id="email-error"></small>
             </div>
     
             <div class="form-group">
                 <p>Phone</p>
-                <input type="text">
+                <input type="text" id="phone" placeholder="Enter Phone Number">
+                <small id="phone-error"></small>
             </div>
     
             <div class="form-group">
-                <p>Address</p>
-                <input type="text">
-            </div>
-    
-            <div class="form-group">
-                <p>City</p>
-                <input type="text">
+                <p>Password</p>
+                <input type="password" id="password" placeholder="Enter Password">   <!-- the "input type = "password" ensures that the typed password is not displayed but dots are displayed to keep it hidden -->
+                <small id="password-error"></small>
             </div>
         </div>
     
         <section id="item-container">
-            <div class="item-flex-container"> 
+            <div class="item-flex-container">
                 <img id="plan-image" src="" alt="">
-                <div class="item-details"> 
+                <div class="item-details">
                     <h2 id="plan-name"></h2>
                     <p id="plan-price"></p>
                 </div>
@@ -92,9 +92,8 @@
             <p id="plan-decription"></p>
         </section>
     </div>
-
-
-    <a href="./purchase.html"><button id = "Purchase"> SUBSCRIBE</button></a>      
+    
+    <button id="purchase">SUBSCRIBE</button> 
 
     <script src = "../Javascript/checkout.js"></script>
 
