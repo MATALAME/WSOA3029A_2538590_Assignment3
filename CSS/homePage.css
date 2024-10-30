@@ -200,6 +200,11 @@ header {
     .Goal-Card {
         max-width: 1300px;
     }
+
+    
+    .logo{
+        justify-content: left;
+    }
 }
 
 @media (max-width: 992px) { /* For the tablet */
@@ -248,6 +253,7 @@ header {
     .logo {
         max-width: 100px;
         margin-left: 20px;
+        justify-content: left;
     }
 }
 
@@ -290,6 +296,7 @@ header {
     .logo {
         max-width: 100px;
         margin-left: 20px;
+        justify-content: left;
     }
 }
 

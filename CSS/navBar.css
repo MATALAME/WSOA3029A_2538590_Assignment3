@@ -75,6 +75,14 @@ header {
 }
 
 @media screen and (max-width: 1024px) {
+
+    header{
+        padding-bottom: 60px;
+    }
+
+    .logo{
+        justify-content: left;
+    }
     .nav__container {
         position: relative;
     }
@@ -123,6 +131,15 @@ header {
 }
 
 @media screen and (max-width: 768px) {
+
+    header{
+        padding-bottom: 60px;
+    }
+
+    .logo{
+        justify-content: left;
+    }
+    
     .nav__container {
         position: relative;
     }
