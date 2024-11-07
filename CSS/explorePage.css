@@ -208,6 +208,67 @@ header {
     background-color: #00b333;  
 }
 
+/*New data viz*/
+
+#lower-cases{
+    margin: 10px;               
+    padding: 10px 20px;        
+    border: none;               
+    border-radius: 5px;         
+    cursor: pointer;           
+    font-size: 14px;           
+    background-color: #3b6021; 
+    color: #EFF0ED;               
+}
+
+#lower-cases:hover{
+    background-color: #00b333;  
+}
+
+#higher-cases{
+    margin: 10px;               
+    padding: 10px 20px;        
+    border: none;               
+    border-radius: 5px;         
+    cursor: pointer;           
+    font-size: 14px;           
+    background-color: #3b6021; 
+    color: #EFF0ED;               
+}
+
+#higher-cases:hover{
+    background-color: #00b333;  
+}
+
+#lower-recovered{
+    margin: 10px;               
+    padding: 10px 20px;        
+    border: none;               
+    border-radius: 5px;         
+    cursor: pointer;           
+    font-size: 14px;           
+    background-color: #3b6021; 
+    color: #EFF0ED;               
+}
+
+#lower-recovered:hover{
+    background-color: #00b333;  
+}
+
+#higher-recovered{
+    margin: 10px;               
+    padding: 10px 20px;        
+    border: none;               
+    border-radius: 5px;         
+    cursor: pointer;           
+    font-size: 14px;           
+    background-color: #3b6021; 
+    color: #EFF0ED;               
+}
+
+#higher-recovered:hover{
+    background-color: #00b333;  
+}
 
 /* Media Queries */
 @media (max-width: 1024px) {

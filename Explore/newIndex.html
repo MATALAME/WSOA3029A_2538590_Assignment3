@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A website to help change your lifestyle through healthy fruit inclusive meals">
+    <meta name="author" content="Matalame Mamabolo">
+    <meta name="keywords" content="Data Visualization, Diet, Energy, API, Data-driven">
+    <meta property="og:title" content="Fruits Homepage">
+    <meta property="og:description" content="A commercial website aimed at helping you eat healthier by including fruits into your meals, its a much healthier option. ">
+    <meta property="og:type" content="Commercial Website">
+    <title>Explore</title>
+
+    <script type="module">
+        import { initialise } from "../Javascript/navMenu.js";
+        initialise("Explore");
+    </script> 
+
+    <link rel = "stylesheet" href = "../CSS/explorePage.css"> 
+    <link rel = "stylesheet" href = "../CSS/navBar.css"> 
+    
+    <script src = " https://cdn.jsdelivr.net/npm/d3-scale-chromatic@3.0.0/dist/d3-scale-chromatic.min.jsLinks to an external site."></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <img class = "logo" src = "../Images/Logo1.png" alt = "logo">
+        <nav>
+
+        </nav>
+    </header>
+    
+    <section id = "Data-Viz2">
+        <h2>Need Energy?</h2>
+        <p> Yes, fruits do help with weight management, but there are other challenges where fruits come in handy. There are many diseases and illnesses in 
+            the world today, especially the infamous covid-19 which took the world by storm. There are people who have been able to recover from covid-19 and 
+            we want to bring to your attention, that amount. Fruits do help with your immune system that can help you fight such diesease. 
+        </p>
+    </section>
+    
+    <div id="filter-buttons">
+        <button id="all">All</button>
+        <button id="lower-cases">Lower Cases</button>
+        <button id="higher-cases">Higher Cases</button>
+        <button id="lower-recovered">Lower Recovered</button>
+        <button id="higher-recovered">Higher Recovered</button>
+    </div>
+    
+    <section id = "scatter"></section>
+
+
+    <script src = "../Javascript/newScatterplot.js"></script>
+
+</body>
+</html>
