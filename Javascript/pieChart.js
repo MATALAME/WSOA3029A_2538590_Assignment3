@@ -17,23 +17,21 @@ async function fetchCovidData() {
 
 function createLegend(legendData, pieChartWidth) {
     const legendWidth = 200;
-    const svgWidth = pieChartWidth + legendWidth + 20; // Add space for the legend
+    const svgWidth = pieChartWidth + legendWidth + 20; 
 
-    // Select the container for the chart
     const chartContainer = d3.select("#chart-container");
-    chartContainer.html(""); // Clear existing content
+    chartContainer.html("");
 
-    // Create an SVG for both the pie chart and the legend
     const svgContainer = chartContainer.append("svg")
         .attr("width", svgWidth)
-        .attr("height", 500); // Adjust the height as necessary to fit the chart
+        .attr("height", 500); 
 
-    // Create the pie chart part
+    
     const pieChartGroup = svgContainer.append("g")
-        .attr("transform", `translate(${pieChartWidth / 2},${250})`); // Center pie chart in the middle
+        .attr("transform", `translate(${pieChartWidth / 2},${250})`); 
 
     const pie = d3.pie().value(d => d.value);
-    const arc = d3.arc().innerRadius(0).outerRadius(180); // Increase radius for a bigger chart
+    const arc = d3.arc().innerRadius(0).outerRadius(180); 
     const color = d3.scaleOrdinal().range(["#FFA500", "#0077B6", "#C23B22"]);
 
     const parts = pieChartGroup.selectAll(".arc")
@@ -47,7 +45,7 @@ function createLegend(legendData, pieChartWidth) {
         .attr("d", arc)
         .attr("class", "pie-piece")
         .on("mouseover", function(event, d) {
-            // Tooltip visibility and content
+
             const tooltip = d3.select("#tooltip");
             tooltip.style("visibility", "visible")
                 .html(`Total: ${d.data.value.toLocaleString()}<br>Percentage: ${(d.data.value / (d3.sum(legendData, d => d.value)) * 100).toFixed(2)}%`);
@@ -79,24 +77,21 @@ function createLegend(legendData, pieChartWidth) {
         .attr("fill", "white")
         .text(d => `${((d.data.value / (d3.sum(legendData, d => d.value))) * 100).toFixed(1)}%`);
 
-    // Create the legend part, placed beside the pie chart
     const legend = svgContainer.append("g")
-        .attr("transform", `translate(${pieChartWidth + 20}, 20)`); // Position legend to the right of the pie chart
+        .attr("transform", `translate(${pieChartWidth + 20}, 20)`); 
 
     const legendItems = legend.selectAll(".legend-item")
         .data(legendData)
         .enter()
         .append("g")
         .attr("class", "legend-item")
-        .attr("transform", (d, i) => `translate(0, ${i * 30})`); // Space out the legend items
+        .attr("transform", (d, i) => `translate(0, ${i * 30})`); 
 
-    // Create colored rectangles for the legend
     legendItems.append("rect")
         .attr("width", 20)
         .attr("height", 20)
         .attr("fill", d => d.color);
 
-    // Add labels with category names
     legendItems.append("text")
         .attr("x", 30)
         .attr("y", 15)
