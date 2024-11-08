@@ -45,6 +45,7 @@ header {
     font-weight: 700;
     letter-spacing: 2px;
     padding-bottom: 20px;
+    margin-top: 40px;
 }
 
 #Data-Viz p{
@@ -269,6 +270,23 @@ header {
 #higher-recovered:hover{
     background-color: #00b333;  
 }
+
+.pie-chart {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+  }
+  
+  .tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 3px;
+    display: none;
+  }
+  
 
 /* Media Queries */
 @media (max-width: 1024px) {

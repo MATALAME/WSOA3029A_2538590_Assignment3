@@ -19,7 +19,7 @@ const svg = d3.select("#force")
 
 const colorScale = d3.scaleThreshold()
     .domain([2000000, 4000000, 6000000])
-    .range(["#B0E57C", "#73C973", "#398858"]);
+    .range(["#FB6D4C", "#C23B22", "#580000"]);
 
 let Bubbles;
 const tooltip = d3.select("#tooltip");
@@ -54,8 +54,8 @@ function createBubbles(data) {
         const cases = parseFloat(d['Total Cases_text'].replace(/,/g, '')) || 0;
         const deaths = parseFloat(d['Total Deaths_text'].replace(/,/g, '')) || 0;
         const recovered = parseFloat(d['Total Recovered_text'].replace(/,/g, '')) || 0;
-        if (recovered >= 4000000) return WIDTH / 4;
-        if (deaths >= 50000) return (3 * WIDTH) / 4;
+        if (recovered >= 4500000) return WIDTH / 4;
+        if (deaths >= 20000) return (3 * WIDTH) / 4;
         return WIDTH / 2;
     }).strength(0.05);
 

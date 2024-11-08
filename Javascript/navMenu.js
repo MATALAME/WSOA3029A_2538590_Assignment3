@@ -5,7 +5,7 @@ const menuItems = [
     { name: "Unlock", href: `${root}/Unlock/index.html` },
     { name: "Pricing", href: `${root}/Pricing/index.html` },
     { name: "Design", href: `${root}/Design/index.html` },
-    { name: "Explore", href: `${root}/Explore/index.html` },
+    { name: "Explore", href: `${root}/Explore/newIndex.html` },
 ];
 
 
