@@ -3,7 +3,7 @@ async function fetchData() {
    const response = await fetch(url);
    const data = await response.json();
 
-   const filteredData = data.slice(0, 20).map(d => ({
+   const filteredData = data.slice(0, 25).map(d => ({
        country: d.Country_text,
        totalCases: parseInt(d["Total Cases_text"].replace(/,/g, "")),
        totalRecovered: parseInt(d["Total Recovered_text"].replace(/,/g, "")),
