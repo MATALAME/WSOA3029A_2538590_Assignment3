@@ -275,17 +275,8 @@ header {
     width: 400px;
     height: 400px;
     margin: 0 auto;
-  }
+}
   
-.tooltip {
-    position: absolute;
-    text-align: center;
-    padding: 5px;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    border-radius: 3px;
-    display: none;
-  }
   
 .pie-piece:hover {
     cursor: pointer;
