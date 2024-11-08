@@ -72,10 +72,11 @@ section img {
     margin: 0 auto;
 }
 
-#information-Structure img, #userFlow img, #Bubble-diagram img {
+#information-Structure img, #userFlow img, #Bubble-diagram img, #scatter-Plot img, #pie-chart img {
     display: block;
-    max-width: 50%;       
+    max-width: 70%;       
     margin: 0 auto;
+    margin-top: 30px;
 }
 
 .phone-img {

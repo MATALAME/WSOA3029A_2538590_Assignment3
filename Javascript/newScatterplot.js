@@ -14,7 +14,7 @@ async function fetchData() {
 }
 
 function createScatterPlot(data) {
-   const margin = { top: 20, right: 30, bottom: 40, left: 200 };
+   const margin = { top: 20, right: 150, bottom: 40, left: 200 };
    const WIDTH = 1300 - margin.left - margin.right;
    const HEIGHT = 500 - margin.top - margin.bottom;
 
@@ -107,7 +107,7 @@ function createLegend1(svg, colorScale, WIDTH) {
 
     const legend = svg.append("g")
     .attr("class", "legend")
-    .attr("transform", `translate(${WIDTH - 150}, 50)`);  
+    .attr("transform", `translate(${WIDTH - 50}, 50)`);  
 
     legend.selectAll("rect")
         .data(legendData)
