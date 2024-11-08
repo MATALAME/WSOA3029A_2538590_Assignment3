@@ -15,7 +15,7 @@ async function fetchData() {
 
 function createScatterPlot(data) {
    const margin = { top: 20, right: 30, bottom: 40, left: 200 };
-   const WIDTH = 1100 - margin.left - margin.right;
+   const WIDTH = 1300 - margin.left - margin.right;
    const HEIGHT = 500 - margin.top - margin.bottom;
 
    const svg = d3.select("#scatter")
@@ -25,7 +25,7 @@ function createScatterPlot(data) {
        .append("g")
        .attr("transform", `translate(${margin.left},${margin.top})`);
 
-   // Define color scale based on total cases
+
    const colorScale = d3.scaleThreshold()
       .domain([10000000, 30000000, 40000000])
       .range(["#FFCD90", "#FF8303", "#FD5901"]);
@@ -38,34 +38,30 @@ function createScatterPlot(data) {
        .domain([0, 50000000])  
        .range([HEIGHT, 0]);
 
-   // Add x-axis
    svg.append("g")
        .attr("transform", `translate(0,${HEIGHT})`)
        .call(d3.axisBottom(xScale).tickValues([0, 10000000, 20000000, 30000000, 40000000, 50000000]).tickFormat(d3.format(".1s"))); 
 
-   // Add y-axis
    svg.append("g")
        .call(d3.axisLeft(yScale).tickValues([0, 10000000, 20000000, 30000000, 40000000, 50000000]).tickFormat(d3.format(".1s"))); 
 
        svg.append("text")
        .attr("class", "x-axis-label")
        .attr("x", WIDTH / 2)
-       .attr("y", HEIGHT + margin.bottom )  // Adjust positioning as needed
+       .attr("y", HEIGHT + margin.bottom )  
        .attr("text-anchor", "middle")
        .style("font-size", "16px", "bold")
        .text("Total Cases");
 
-   // Y-axis label
    svg.append("text")
        .attr("class", "y-axis-label")
        .attr("x", -HEIGHT / 2)
-       .attr("y", -margin.left + 150)  // Adjust positioning as needed
+       .attr("y", -margin.left + 150) 
        .attr("text-anchor", "middle")
        .attr("transform", "rotate(-90)")
        .style("font-size", "16px", "bold")
        .text("Recovered");
 
-   // Tooltip
    const tooltip = d3.select("body").append("div")
         .attr("class", "tooltip")
         .style("visibility", "hidden")
@@ -76,7 +72,6 @@ function createScatterPlot(data) {
         .style("border-radius", "5px")
         .style("pointer-events", "none");
 
-   // Draw bubbles
    svg.selectAll(".bubble")
        .data(data)
        .enter()
@@ -85,9 +80,9 @@ function createScatterPlot(data) {
        .attr("cx", d => xScale(d.totalCases))  
        .attr("cy", d => yScale(d.totalRecovered))  
        .attr("r", 15)  
-       .attr("fill", d => colorScale(d.totalCases))  // Apply color scale based on total cases
-       .attr("stroke", "#000")  // Black stroke color
-       .attr("stroke-width", 1)  // Stroke width
+       .attr("fill", d => colorScale(d.totalCases))  
+       .attr("stroke", "#000")  
+       .attr("stroke-width", 1)  
        .on("mouseenter", function (event, d) {
            tooltip.style("visibility", "visible")
                .text(`${d.country}: Total Cases: ${d.totalCases}, Recovered: ${d.totalRecovered}`);
@@ -100,48 +95,40 @@ function createScatterPlot(data) {
            tooltip.style("visibility", "hidden");
        });
 
-   // Add legend
-   createLegend(svg, colorScale, WIDTH);
+   createLegend1(svg, colorScale, WIDTH);
 }
 
-function createLegend(svg, colorScale, WIDTH) {
-   const legendWidth = 20;
-   const legendHeight = 20;
-   const legendSpacing = 10;
-   const legendX = WIDTH - 150;  // Adjusted positioning for visibility
-   const legendY = 20;
+function createLegend1(svg, colorScale, WIDTH) {
+    const legendData = [
+        { label: "< 10M", domain: [0, 10000000], color: "#FFCD90" },
+        { label: "10M - 30M", domain: [10000000, 30000000], color: "#FF8303" },
+        { label: "30M - 40M", domain: [30000000, 40000000], color: "#FD5901" }
+    ];
 
-   const colorRange = colorScale.range();
-   const legendLabels = ["< 2M", "2M - 4M", "4M - 6M", "> 6M"];
+    const legend = svg.append("g")
+    .attr("class", "legend")
+    .attr("transform", `translate(${WIDTH - 150}, 50)`);  
 
-   const legend = svg.append("g")
-       .attr("class", "legend")
-       .attr("transform", `translate(${legendX}, ${legendY})`);
+    legend.selectAll("rect")
+        .data(legendData)
+        .enter()
+        .append("rect")
+        .attr("width", 20)
+        .attr("height", 20)
+        .attr("y", (d, i) => i * 25)
+        .style("fill", d => d.color);
 
-   // Draw color boxes in the legend
-   legend.selectAll(".legend-box")
-       .data(colorRange)
-       .join("rect")
-       .attr("class", "legend-box")
-       .attr("x", 0)
-       .attr("y", (d, i) => i * (legendHeight + legendSpacing))
-       .attr("width", legendWidth)
-       .attr("height", legendHeight)
-       .style("fill", d => d);
-
-   // Add text labels for the legend
-   legend.selectAll(".legend-text")
-       .data(legendLabels)
-       .join("text")
-       .attr("class", "legend-text")
-       .attr("x", legendWidth + 10)
-       .attr("y", (d, i) => i * (legendHeight + legendSpacing) + legendHeight / 1.5)
-       .text(d => d)
-       .attr("font-size", "14px")
-       .attr("fill", "#000");
+    legend.selectAll("text")
+        .data(legendData)
+        .enter()
+        .append("text")
+        .attr("x", 25)
+        .attr("y", (d, i) => i * 25 + 15)
+        .text(d => `${d.domain[0].toLocaleString()} - ${d.domain[1].toLocaleString()}`)
+        .attr("font-size", "14px")
+        .attr("fill", "#000");
 }
 
-// Filter bubbles by case and death counts
 function filterData(filter) {
    d3.selectAll(".bubble").each(function(d) {
        let isVisible = false;
@@ -160,7 +147,7 @@ function filterData(filter) {
                isVisible = d.totalRecovered > 25000000 && d.totalDeaths <= 50000000;
                break;
            default:
-               isVisible = true;  // Shows all bubbles if no filter is applied
+               isVisible = true; 
                break;
        }
 
@@ -168,7 +155,6 @@ function filterData(filter) {
    });
 }
 
-// Event listeners for filtering
 document.getElementById("all").addEventListener("click", () => filterData("all"));
 document.getElementById("lower-cases").addEventListener("click", () => filterData('lower-cases'));
 document.getElementById("higher-cases").addEventListener("click", () => filterData('higher-cases'));

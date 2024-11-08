@@ -277,7 +277,7 @@ header {
     margin: 0 auto;
   }
   
-  .tooltip {
+.tooltip {
     position: absolute;
     text-align: center;
     padding: 5px;
@@ -287,6 +287,17 @@ header {
     display: none;
   }
   
+.pie-piece:hover {
+    cursor: pointer;
+    transform: scale(1.1); /* Increase the size of the hovered pie part by 10% */
+    transition: transform 0.3s ease; 
+}
+
+.legend-item:hover rect {
+    cursor: pointer;
+    transform: scale(1.1); 
+    transition: transform 0.3s ease; 
+}
 
 /* Media Queries */
 @media (max-width: 1024px) {

@@ -1,16 +1,13 @@
-// Async function to fetch data from the API
 async function fetchCovidData() {
     const response = await fetch('https://covid-19.dataflowkit.com/v1');
     const data = await response.json();
     
-    // Check if data is available for South Africa (38th element)
-    const SouthAfricaData = data[37];  // Get South Africa's data (38th element)
+    const SouthAfricaData = data[37];  
     if (!SouthAfricaData) {
         console.error("Data for South Africa not found.");
         return null;
     }
 
-    // Use regex to remove commas and parse integers
     const cases = SouthAfricaData["Total Cases_text"] ? parseInt(SouthAfricaData["Total Cases_text"].replace(/,/g, "")) : 0;
     const deaths = SouthAfricaData["Total Deaths_text"] ? parseInt(SouthAfricaData["Total Deaths_text"].replace(/,/g, "")) : 0;
     const recovered = SouthAfricaData["Total Recovered_text"] ? parseInt(SouthAfricaData["Total Recovered_text"].replace(/,/g, "")) : 0;
@@ -18,88 +15,116 @@ async function fetchCovidData() {
     return { cases, deaths, recovered };
 }
 
-// Function to create the pie chart (No changes needed here)
+function createLegend(legendData, pieChartWidth) {
+    const legendWidth = 200;
+    const svgWidth = pieChartWidth + legendWidth + 20; // Add space for the legend
+
+    // Select the container for the chart
+    const chartContainer = d3.select("#chart-container");
+    chartContainer.html(""); // Clear existing content
+
+    // Create an SVG for both the pie chart and the legend
+    const svgContainer = chartContainer.append("svg")
+        .attr("width", svgWidth)
+        .attr("height", 500); // Adjust the height as necessary to fit the chart
+
+    // Create the pie chart part
+    const pieChartGroup = svgContainer.append("g")
+        .attr("transform", `translate(${pieChartWidth / 2},${250})`); // Center pie chart in the middle
+
+    const pie = d3.pie().value(d => d.value);
+    const arc = d3.arc().innerRadius(0).outerRadius(180); // Increase radius for a bigger chart
+    const color = d3.scaleOrdinal().range(["#FFA500", "#0077B6", "#C23B22"]);
+
+    const parts = pieChartGroup.selectAll(".arc")
+        .data(pie(legendData))
+        .enter()
+        .append("g")
+        .attr("class", "arc")
+        .attr("fill", d => color(d.data.label));
+
+        parts.append("path")
+        .attr("d", arc)
+        .attr("class", "pie-piece")
+        .on("mouseover", function(event, d) {
+            // Tooltip visibility and content
+            const tooltip = d3.select("#tooltip");
+            tooltip.style("visibility", "visible")
+                .html(`Total: ${d.data.value.toLocaleString()}<br>Percentage: ${(d.data.value / (d3.sum(legendData, d => d.value)) * 100).toFixed(2)}%`);
+            
+            // Apply hover effect (opacity change)
+            d3.select(this).style("opacity", 0.7);  // Reduce opacity on hover
+        })
+        .on("mousemove", function(event) {
+            const tooltip = d3.select("#tooltip");
+            tooltip.style("top", (event.pageY + 10) + "px")
+                .style("left", (event.pageX + 10) + "px");
+        })
+        .on("mouseout", function() {
+            // Reset tooltip visibility
+            d3.select("#tooltip").style("visibility", "hidden");
+            
+            // Reset hover effect
+            d3.select(this).style("opacity", 1);  // Reset opacity
+        });
+    
+
+    parts.append("text")
+        .attr("transform", function(d) {
+            const centroid = arc.centroid(d);
+            return `translate(${centroid})`;
+        })
+        .attr("dy", ".35em")
+        .attr("text-anchor", "middle")
+        .attr("fill", "white")
+        .text(d => `${((d.data.value / (d3.sum(legendData, d => d.value))) * 100).toFixed(1)}%`);
+
+    // Create the legend part, placed beside the pie chart
+    const legend = svgContainer.append("g")
+        .attr("transform", `translate(${pieChartWidth + 20}, 20)`); // Position legend to the right of the pie chart
+
+    const legendItems = legend.selectAll(".legend-item")
+        .data(legendData)
+        .enter()
+        .append("g")
+        .attr("class", "legend-item")
+        .attr("transform", (d, i) => `translate(0, ${i * 30})`); // Space out the legend items
+
+    // Create colored rectangles for the legend
+    legendItems.append("rect")
+        .attr("width", 20)
+        .attr("height", 20)
+        .attr("fill", d => d.color);
+
+    // Add labels with category names
+    legendItems.append("text")
+        .attr("x", 30)
+        .attr("y", 15)
+        .attr("font-size", "14px")
+        .attr("fill", "black")
+        .text(d => d.label);
+}
+
 function createPieChart() {
     fetchCovidData().then(data => {
         if (!data) {
-            console.error("Unable to fetch valid data for the pie chart.");
-            return;  // Exit if data is not valid
+            console.error("Can't fetch API data");
+            return;  
         }
 
         const pieData = [
-            { label: "Cases", value: data.cases, color: "blue" },
-            { label: "Recovered", value: data.recovered, color: "green" },
-            { label: "Deaths", value: data.deaths, color: "red" }
+            { label: "Cases", value: data.cases, color: "#FFA500" },
+            { label: "Recovered", value: data.recovered, color: "#0077B6" },
+            { label: "Deaths", value: data.deaths, color: "#C23B22" }
         ];
-        
-        const width = 400, height = 400, radius = Math.min(width, height) / 2;
-        const svg = d3.select("#chart")
-            .append("svg")
-            .attr("width", width)
-            .attr("height", height)
-            .append("g")
-            .attr("transform", `translate(${width / 2},${height / 2})`);
-        
-        const color = d3.scaleOrdinal().range(["#FFA500", "#0077B6", "#C23B22"]);
-        
-        const pie = d3.pie().value(d => d.value);
-        const arc = d3.arc().innerRadius(0).outerRadius(radius);
-        
-        const arcs = svg.selectAll(".arc")
-            .data(pie(pieData))
-            .enter()
-            .append("g")
-            .attr("class", "arc")
-            .attr("fill", d => color(d.data.label));
-        
-        arcs.append("path")
-            .attr("d", arc)
-            .attr("class", "pie-piece")
-            .on("mouseover", function(event, d) {
-                const tooltip = d3.select("#tooltip");
-                tooltip.style("visibility", "visible")
-                    .html(`
-                        <strong>${d.data.label}:</strong><br>
-                        Total: ${d.data.value.toLocaleString()}<br>
-                        Percentage: ${(d.data.value / (data.cases + data.recovered + data.deaths) * 100).toFixed(2)}%
-                    `);
-            })
-            .on("mousemove", function(event) {
-                const tooltip = d3.select("#tooltip");
-                tooltip.style("top", (event.pageY + 10) + "px")
-                    .style("left", (event.pageX + 10) + "px");
-            })
-            .on("mouseout", function() {
-                d3.select("#tooltip").style("visibility", "hidden");
-            });
 
-        arcs.append("text")
-            .attr("transform", function(d) {
-                const centroid = arc.centroid(d);
-                return `translate(${centroid})`;
-            })
-            .attr("dy", ".35em")
-            .attr("text-anchor", "middle")
-            .attr("fill", "white")
-            .text(d => `${((d.data.value / (data.cases + data.recovered + data.deaths)) * 100).toFixed(1)}%`);
+        const pieChartWidth = 500; // Make the pie chart bigger
 
-        // Create the legend for the pie chart
-        const legend = d3.select("#legend");
-
-        pieData.forEach(d => {
-            const legendItem = legend.append("div")
-                .attr("class", "em");
-
-            legendItem.append("span")
-                .style("background-color", d.color);
-
-            legendItem.append("span")
-                .text(`${d.label}: ${((d.value / (data.cases + data.recovered + data.deaths)) * 100).toFixed(1)}%`);
-        });
+        // Create pie chart and legend dynamically
+        createLegend(pieData, pieChartWidth);
     }).catch(err => {
         console.error("Error fetching data: ", err);
     });
 }
 
-// Create the chart
 createPieChart();

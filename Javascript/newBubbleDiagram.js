@@ -1,62 +1,70 @@
-async function fetchData() {
+async function fetchData() { //In my assignmnent feedback, Andre advised me to use the async method and I've implemented it in my other data vsiualizations as well
     const response = await fetch("https://covid-19.dataflowkit.com/v1");
-    const data = await response.json();
-    const filteredData = data.slice(24, 50);
+    const data = await response.json(); // Parse the response data as JSON
+    
+    const filteredData = data.slice(24, 50); // This filters the data so it can only use the data between 24 and 50
     createBubbles(filteredData);
 }
 
 const MARGIN = { top: 40, right: 100, bottom: 40, left: 40 };
+
+
 let WIDTH = window.innerWidth * 0.8 - MARGIN.left - MARGIN.right;
 let HEIGHT = window.innerHeight * 0.8 - MARGIN.top - MARGIN.bottom;
 
+
 const svg = d3.select("#force")
     .append("svg")
-    .attr("width", WIDTH + MARGIN.left + MARGIN.right)
-    .attr("height", HEIGHT + MARGIN.top + MARGIN.bottom)
+    .attr("width", WIDTH + MARGIN.left + MARGIN.right) 
+    .attr("height", HEIGHT + MARGIN.top + MARGIN.bottom) 
     .append("g")
-    .attr("transform", `translate(${MARGIN.left}, ${MARGIN.top})`)
-    .style("border-radius", "20px");
+    .attr("transform", `translate(${MARGIN.left}, ${MARGIN.top})`) 
+    .style("border-radius", "20px"); 
+
 
 const colorScale = d3.scaleThreshold()
-    .domain([2000000, 4000000, 6000000])
-    .range(["#FB6D4C", "#C23B22", "#580000"]);
+    .domain([2000000, 4000000, 6000000]) // This is the colour ranges for the Covid cases between those amounts
+    .range(["#FB6D4C", "#C23B22", "#580000"]); 
 
 let Bubbles;
-const tooltip = d3.select("#tooltip");
+const tooltip = d3.select("#tooltip"); 
+
 
 function createBubbles(data) {
+   
     const rScale = d3.scaleSqrt()
-        .domain([0, d3.max(data, d => parseFloat(d['Total Cases_text'].replace(/,/g, '')) || 0)]) 
-        .range([10, 40]);
+        .domain([0, d3.max(data, d => parseFloat(d['Total Cases_text'].replace(/,/g, '')) || 0)]) //the parseFloat convertes the value into a float while the .replace removes the commas that were in the original data  
+        .range([10, 40]); 
 
     Bubbles = svg.selectAll("circle")
-        .data(data)
+        .data(data) 
         .enter()
         .append("circle")
         .attr("r", d => rScale(parseFloat(d['Total Cases_text'].replace(/,/g, '')) || 0))
         .attr("cy", HEIGHT / 2 - 30)
         .style("fill", d => colorScale(parseFloat(d['Total Cases_text'].replace(/,/g, '')) || 0))
-        .on("mouseenter", (event, d) => {
+        .on("mouseenter", (event, d) => { 
             tooltip.style("visibility", "visible")
                 .text(`Country: ${d.Country_text}, Cases: ${d['Total Cases_text']}, Deaths: ${d['Total Deaths_text']}, Recovered: ${d['Total Recovered_text']}`);
         })
-        .on("mousemove", event => {
+        .on("mousemove", event => { 
             tooltip.style("top", (event.pageY + 10) + "px")
                 .style("left", (event.pageX + 10) + "px");
         })
-        .on("mouseleave", () => tooltip.style("visibility", "hidden"));
+        .on("mouseleave", () => tooltip.style("visibility", "hidden")); 
 
-    const forceX = d3.forceX(WIDTH / 2).strength(0.05);
-    const forceY = d3.forceY(HEIGHT / 2).strength(0.05);
-    const collideForce = d3.forceCollide(d => rScale(parseFloat(d['Total Cases_text'].replace(/,/g, '')) || 0) + 2);
+        //this code is from my assignmnet 3 data visualizations
+    const forceX = d3.forceX(WIDTH / 2).strength(0.05); 
+    const forceY = d3.forceY(HEIGHT / 2).strength(0.05); 
+    const collideForce = d3.forceCollide(d => rScale(parseFloat(d['Total Cases_text'].replace(/,/g, '')) || 0) + 2); 
 
-    const forceXSplit = d3.forceX(d => {
+    const forceXSplit = d3.forceX(d => { //this handles the forces for the different categories namely 'recovered' and 'deaths' 
         const cases = parseFloat(d['Total Cases_text'].replace(/,/g, '')) || 0;
         const deaths = parseFloat(d['Total Deaths_text'].replace(/,/g, '')) || 0;
         const recovered = parseFloat(d['Total Recovered_text'].replace(/,/g, '')) || 0;
-        if (recovered >= 4500000) return WIDTH / 4;
-        if (deaths >= 20000) return (3 * WIDTH) / 4;
-        return WIDTH / 2;
+        if (recovered >= 4500000) return WIDTH / 4; 
+        if (deaths >= 20000) return (3 * WIDTH) / 4; 
+        return WIDTH / 2; 
     }).strength(0.05);
 
     const simulation = d3.forceSimulation(data)
@@ -64,15 +72,15 @@ function createBubbles(data) {
         .force("y", forceY)
         .force("collide", collideForce)
         .on("tick", () => {
-            Bubbles.attr("cx", d => d.x).attr("cy", d => d.y);
+            Bubbles.attr("cx", d => d.x).attr("cy", d => d.y); 
         });
 
     d3.select("#split").on("click", () => {
-        simulation.force("x", forceXSplit).alpha(0.6).restart();
+        simulation.force("x", forceXSplit).alpha(0.6).restart(); 
     });
 
     d3.select("#combine").on("click", () => {
-        simulation.force("x", forceX).alpha(0.9).restart();
+        simulation.force("x", forceX).alpha(0.9).restart(); 
     });
 
     const mostRecoveredTitle = svg.append("text")
@@ -107,36 +115,34 @@ function createBubbles(data) {
         mostDeathsTitle.style("visibility", "hidden");
     });
 
-    createLegend();
+    createLegend2();
 }
 
-function createLegend() {
-    const legendData = ["0 - 2000000", "2000000 - 4000000", "4000000 - 6000000"];
-    const legend = svg.append("g").attr("class", "legend").attr("transform", `translate(${WIDTH - 150}, 100)`);
 
+function createLegend2() {
+    const legendData = ["0 - 2000000", "2000000 - 4000000", "4000000 - 6000000"]; 
+    const legend = svg.append("g")
+        .attr("class", "legend")
+        .attr("transform", `translate(${WIDTH - 150}, 50)`); 
+
+    
     legend.selectAll("rect")
         .data(colorScale.range())
         .enter()
         .append("rect")
         .attr("width", 20)
         .attr("height", 20)
-        .attr("y", (d, i) => i * 25)
-        .style("fill", d => d);
+        .attr("y", (d, i) => i * 25) 
+        .style("fill", d => d); 
 
     legend.selectAll("text")
         .data(legendData)
         .enter()
         .append("text")
-        .attr("x", 25)
+        .attr("x", 25) 
         .attr("y", (d, i) => i * 25 + 15)
-        .text(d => d);
+        .text(d => d) 
+        .style("font-size", "12px"); 
 }
-
-window.addEventListener("resize", () => {
-    WIDTH = window.innerWidth * 0.8 - MARGIN.left - MARGIN.right;
-    HEIGHT = window.innerHeight * 0.8 - MARGIN.top - MARGIN.bottom;
-    svg.attr("width", WIDTH + MARGIN.left + MARGIN.right).attr("height", HEIGHT + MARGIN.top + MARGIN.bottom);
-    createBubbles(data);
-});
 
 fetchData();
